@@ -16,5 +16,155 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{IVANOV2014}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f759e40ca34f7a4eff8e36d856840d9}{%
+           family={Ivanov},
+           familyi={I\bibinitperiod},
+           given={Stanislav},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{fullhash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{fullhashraw}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{bibnamehash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{authorbibnamehash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{authornamehash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{authorfullhash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{authorfullhashraw}{9f759e40ca34f7a4eff8e36d856840d9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-954-92786-3-7}
+      \field{month}{01}
+      \field{title}{Hotel Revenue Management: From Theory to Practice}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.13140/RG.2.1.2714.8960
+      \endverb
+    \endentry
+    \entry{PETRICEK2021}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=589db46c6768c184355ed542b56d1887}{%
+           family={Petríček},
+           familyi={P\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Praha}%
+      }
+      \list{publisher}{1}{%
+        {Wolters Kluwer}%
+      }
+      \strng{namehash}{589db46c6768c184355ed542b56d1887}
+      \strng{fullhash}{589db46c6768c184355ed542b56d1887}
+      \strng{fullhashraw}{589db46c6768c184355ed542b56d1887}
+      \strng{bibnamehash}{589db46c6768c184355ed542b56d1887}
+      \strng{authorbibnamehash}{589db46c6768c184355ed542b56d1887}
+      \strng{authornamehash}{589db46c6768c184355ed542b56d1887}
+      \strng{authorfullhash}{589db46c6768c184355ed542b56d1887}
+      \strng{authorfullhashraw}{589db46c6768c184355ed542b56d1887}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-80-7676-209-1}
+      \field{series}{Vydání první}
+      \field{title}{Revenue management v ubytovacích službách. Výstavba stochastického optimalizačního modelu}
+      \field{year}{2021}
+    \endentry
+    \entry{ANDERSONXIE2016}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=fa0dfb4aba4c4ec7a787924c4f83b462}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Chris\bibnamedelima K.},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=16c1080ecff4de5d087c6954e01270d7}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Xiaoqing\bibnamedelima (Kristine)},
+           giveni={X\bibinitperiod\bibinitdelim (\bibinitperiod}}}%
+      }
+      \strng{namehash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{fullhash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{fullhashraw}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{bibnamehash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{authorbibnamehash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{authornamehash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{authorfullhash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{authorfullhashraw}{1bc46130dca2f335a1b4d49015f0580a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Revenue Management}
+      \field{number}{2-3}
+      \field{title}{Dynamic pricing in hospitality: overview and opportunities}
+      \field{volume}{9}
+      \field{year}{2016}
+      \field{pages}{165\bibrangedash 174}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1504/IJRM.2016.077029
+      \endverb
+      \verb{urlraw}
+      \verb https://www.inderscienceonline.com/doi/abs/10.1504/IJRM.2016.077029
+      \endverb
+      \verb{url}
+      \verb https://www.inderscienceonline.com/doi/abs/10.1504/IJRM.2016.077029
+      \endverb
+    \endentry
+    \entry{FIORI2020102332}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=bfd360ded1e856dff5089bd7af1ea336}{%
+           family={Fiori},
+           familyi={F\bibinitperiod},
+           given={Anna\bibnamedelima Maria},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e9cad851d4585dcac88248cb64d243c8}{%
+           family={Foroni},
+           familyi={F\bibinitperiod},
+           given={Ilaria},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{fullhash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{fullhashraw}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{bibnamehash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{authorbibnamehash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{authornamehash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{authorfullhash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{authorfullhashraw}{2a2bc7ea6464aca7762378652728a2a0}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With a few notable exceptions, airlines and hospitality forecasting research has been focused so far on point predictions of customers’ bookings. However, Revenue Management decisions are subject to a much greater risk when based exclusively on point predictions. To overcome this drawback, we propose a stochastic framework that allows the construction of prediction intervals for reservation-based (pickup) forecasting methods, which are widely used in the industry. Moreover, we introduce an extension of the multiplicative pickup technique based on Generalized Linear Models. We test the proposed framework with real reservation data from a medium-sized hotel on Lake Maggiore (Italy) and we obtain more efficient prediction intervals relative to classical time series methods. Our approach can be useful to hotel revenue managers that wish to make more informed decisions, planning alternative pricing and room allocation strategies for a range of possible demand scenarios.}
+      \field{issn}{0278-4319}
+      \field{journaltitle}{International Journal of Hospitality Management}
+      \field{title}{Prediction accuracy for reservation-based forecasting methods applied in Revenue Management}
+      \field{volume}{84}
+      \field{year}{2020}
+      \field{pages}{102332}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ijhm.2019.102332
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0278431918309022
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0278431918309022
+      \endverb
+      \keyw{Hotel demand forecasting,Multiplicative model,Pickup forecasting technique,Prediction intervals}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
