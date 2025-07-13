@@ -1,8 +1,8 @@
-PWD c:/Users/jrp/OneDrive/Dokuments/My Documents/School/MFF/Mathematics/Finanční Matematika/thesis/source
+PWD c:/Users/jrp/OneDrive/Dokuments/My Documents/School/MFF/Mathematics/Finanční Matematika/thesis/source/LaTex
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf.cnf
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/jrp/OneDrive/Dokuments/My Documents/School/MFF/Mathematics/Finanční Matematika/thesis/source/thesis.tex
+INPUT c:/Users/jrp/OneDrive/Dokuments/My Documents/School/MFF/Mathematics/Finanční Matematika/thesis/source/LaTex/thesis.tex
 OUTPUT tmp/thesis.log
 INPUT metadata.tex
 INPUT xmp.tex
