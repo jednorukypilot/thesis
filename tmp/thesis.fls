@@ -451,7 +451,13 @@ OUTPUT tmp/chap01.aux
 INPUT ./chap01.tex
 INPUT ./chap01.tex
 INPUT chap01.tex
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT ./chap02.tex
 INPUT ./chap02.tex
 OUTPUT tmp/chap02.aux
@@ -470,8 +476,6 @@ OUTPUT tmp/bibliography.aux
 INPUT ./bibliography.tex
 INPUT ./bibliography.tex
 INPUT bibliography.tex
-INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
-INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT tmp/thesis.lof
 INPUT tmp/thesis.lof
 INPUT tmp/thesis.lof
@@ -504,7 +508,6 @@ INPUT tmp/thesis.out
 INPUT tmp/thesis.run.xml
 OUTPUT tmp/thesis.run.xml
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
-INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr17.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb
