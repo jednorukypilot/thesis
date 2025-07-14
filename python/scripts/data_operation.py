@@ -53,6 +53,41 @@ def combine_original_data(directory: str):
     
     data_frames = [pd.read_csv(file) for file in csv_files]
     combined_df = pd.concat(data_frames, ignore_index=True)
+    combined_df = combined_df.drop_duplicates(subset='Confirmation code', keep='first')
     combined_df = rename_columns(combined_df)
     return combined_df
-    
+
+def transform_to_daily_stays(relevant_data: pd.DataFrame) -> pd.DataFrame:
+    records = []
+    for _, row in relevant_data.iterrows():
+        for i in range(row['nights_count']):
+            stay_date = row['start_date'] + pd.Timedelta(days=i)
+            records.append({
+                'stay_date': stay_date, 
+                'apartment_id': row['apartment_id'], 
+                'price': row['price'], 
+                'beds_count': row['beds_count'], 
+                'nightly_rate': row['nightly_rate'], 
+                'nightly_bed_rate': row['nightly_bed_rate']
+                })
+            
+    df = pd.DataFrame(records)
+    df['apartment_bed_rate_pair'] = list(zip(df['apartment_id'], df['nightly_bed_rate']))
+
+    return df
+
+def fill_missing_dates(daily_agg: pd.DataFrame) -> pd.DataFrame:
+    full_index = pd.date_range(start=daily_agg.index.min(), end=daily_agg.index.max(), freq='D')
+
+    default_values = {
+        'room_nights': 0,
+        'occupied_apartments': [],
+        'apartment_bed_rate_pairs': [],
+        'avg_bed_rate': 0.0,
+        'sum_bed_rate': 0.0
+    }
+
+    daily_agg = daily_agg.reindex(full_index)
+    # daily_agg = daily_agg.fillna(value=default_values)
+    daily_agg = daily_agg.reset_index().rename(columns={'index': 'stay_date'})
+    return daily_agg
