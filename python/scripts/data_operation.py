@@ -4,6 +4,22 @@ import pandas as pd
 
 from scripts.static import *
 
+
+def earnings_to_numbers(earnings :pd.Series) -> pd.Series: 
+    return ( 
+        earnings
+        .fillna(0)
+        .astype(str)                          
+        .str.replace('Kč', '', regex=False)
+        .str.replace(',', '', regex=False)
+        .str.strip()
+        .replace('', '0')
+        .astype(float)
+        .mul(115) #real price in Halíře
+        .round(0)
+        .astype(int)
+    )
+
 def save_data_frame(df: pd.DataFrame, filename: str):
     if not isinstance(df, pd.DataFrame):
         raise ValueError("Input must be a pandas DataFrame.")
