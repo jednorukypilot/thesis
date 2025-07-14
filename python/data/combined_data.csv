@@ -1,4 +1,4 @@
-Confirmation code,Status,Guest name,Contact,# of adults,# of children,# of infants,Start date,End date,# of nights,Booked,Listing,Earnings
+Confirmation code,Status,Guest name,Contact,adults_count,children_count,infants_count,start_date,end_date,nights_count,booked,apartment_id,earnings
 HMWHSF5N9C,Past guest,Siri Lang,,2,0,0,11/17/2023,11/21/2023,4,2023-11-07,Apartment with balcony and amazing view Old Town,"12,396.60 Kč"
 HMN5YNA2SR,Past guest,Melih Kılıç,,2,0,0,11/18/2023,11/21/2023,3,2023-11-15,Unique Old town Apartment with terrace,"6,533.92 Kč"
 HMWJTC25HY,Past guest,Stacey Vavakas,,3,0,0,11/21/2023,11/23/2023,2,2023-11-21,Wonderful Old Town Prague apartment,"5,154.58 Kč"

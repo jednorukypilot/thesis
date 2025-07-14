@@ -1,4 +1,4 @@
-Listing,# of beds,# of infants,# of nights,Start date,End date,Booked,Price,Nightly rate,Nightly bed rate
+apartment_id,beds_count,infants_count,nights_count,start_date,end_date,booked,price,nightly_rate,nightly_bed_rate
 0,2,0,4,2023-11-17,2023-11-21,2023-11-07,1425609,356402,178201
 1,2,0,3,2023-11-18,2023-11-21,2023-11-15,751401,250467,125234
 2,3,0,2,2023-11-21,2023-11-23,2023-11-21,592777,296388,98796

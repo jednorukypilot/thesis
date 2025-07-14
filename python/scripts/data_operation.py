@@ -28,6 +28,23 @@ def save_data_frame(df: pd.DataFrame, filename: str):
     df.to_csv(output_path, index=False)
     print(f"Data saved to {output_path}")
 
+def rename_columns(df: pd.DataFrame) -> pd.DataFrame:
+    if not isinstance(df, pd.DataFrame):
+        raise ValueError("Input must be a pandas DataFrame.")
+    
+    df = df.rename(columns={
+        'Listing': 'apartment_id',
+        '# of adults': 'adults_count',
+        '# of children': 'children_count',
+        '# of infants': 'infants_count',
+        '# of nights': 'nights_count',
+        'Start date': 'start_date',
+        'End date': 'end_date',
+        'Booked': 'booked',
+        'Earnings': 'earnings',        
+    })
+    return df
+
 def combine_original_data(directory: str):
     csv_files = glob.glob(os.path.join(directory, '*.csv'))
 
@@ -36,5 +53,6 @@ def combine_original_data(directory: str):
     
     data_frames = [pd.read_csv(file) for file in csv_files]
     combined_df = pd.concat(data_frames, ignore_index=True)
+    combined_df = rename_columns(combined_df)
     return combined_df
     
