@@ -37,8 +37,4 @@ def combine_original_data(directory: str):
     data_frames = [pd.read_csv(file) for file in csv_files]
     combined_df = pd.concat(data_frames, ignore_index=True)
     return combined_df
-
-def load_full_data(directory: str):
-    combined_df = combine_original_data(directory)
-    return combined_df
     
