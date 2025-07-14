@@ -77,7 +77,11 @@ def transform_to_daily_stays(relevant_data: pd.DataFrame) -> pd.DataFrame:
     return df
 
 def fill_missing_dates(daily_agg: pd.DataFrame) -> pd.DataFrame:
-    full_index = pd.date_range(start=daily_agg.index.min(), end=daily_agg.index.max(), freq='D')
+    full_index = pd.date_range(
+        start=daily_agg['stay_date'].min(), 
+        end=daily_agg['stay_date'].max(), 
+        freq='D'
+        )
 
     default_values = {
         'room_nights': 0,
