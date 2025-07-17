@@ -12,3 +12,12 @@ aux/
 *.toc
 *.xmpdata
 *.xmpi
+
+# Optional: common Python ignores
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env/
+
+# Python virtual environments
+.venv/
