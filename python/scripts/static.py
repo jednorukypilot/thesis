@@ -13,3 +13,6 @@ RELEVANT_COLUMNS = [
    'nightly_rate',
    'nightly_bed_rate',
 ]   
+
+START_DATE = '2023-11-03 00:00:00'
+END_DATE = '2025-06-01 00:00:00'
