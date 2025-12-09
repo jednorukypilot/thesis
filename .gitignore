@@ -21,3 +21,4 @@ __pycache__/
 
 # Python virtual environments
 .venv/
+requirements.txt
