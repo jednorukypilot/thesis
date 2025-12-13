@@ -2,7 +2,7 @@ import os
 import glob
 import pandas as pd
 
-from python.scripts.constants import *
+from scripts.constants import *
 
 
 def earnings_to_numbers(earnings :pd.Series) -> pd.Series: 

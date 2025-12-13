@@ -164,6 +164,86 @@
       \endverb
       \keyw{Hotel demand forecasting,Multiplicative model,Pickup forecasting technique,Prediction intervals}
     \endentry
+    \entry{PIMENTEL2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=9386a1a289d1f75848fff4b352d78823}{%
+           family={Pimentel},
+           familyi={P\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=c57492a938debdb9be1355cb5cfc6032}{%
+           family={Aizezikali},
+           familyi={A\bibinitperiod},
+           given={Aishajiang},
+           giveni={A\bibinitperiod}}}%
+        {{hash=15aadd4b31a354652dbc145afb095eb9}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9c0de20c89a9089ec3d976656b56e63}
+      \strng{fullhash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{fullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{bibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authorbibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authornamehash}{b9c0de20c89a9089ec3d976656b56e63}
+      \strng{authorfullhash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authorfullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers & Industrial Engineering}
+      \field{month}{09}
+      \field{title}{Hotel Revenue Management: Benefits of Simultaneous Overbooking and Allocation Problem Formulation in Price Optimization}
+      \field{volume}{137}
+      \field{year}{2019}
+      \field{pages}{106073}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cie.2019.106073
+      \endverb
+    \endentry
+    \entry{BITRAN2003overview}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c3dffa5cb5a19b798d8c9d789d14ee4b}{%
+           family={Bitran},
+           familyi={B\bibinitperiod},
+           given={Gabriel\bibnamedelima R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=87d88c604aa1d66739af016ea404d417}{%
+           family={Caldentey},
+           familyi={C\bibinitperiod},
+           given={René},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{fullhash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{fullhashraw}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{bibnamehash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{authorbibnamehash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{authornamehash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{authorfullhash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{authorfullhashraw}{3644d566f3c62b733c76b44d4eab03d5}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Manufacturing \& Service Operations Management}
+      \field{number}{3}
+      \field{title}{An Overview of Pricing Models for Revenue Management}
+      \field{volume}{5}
+      \field{year}{2003}
+      \field{pages}{203\bibrangedash 229}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1287/msom.5.3.203.16031
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
