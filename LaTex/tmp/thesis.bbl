@@ -19,7 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{IVANOV2014}{book}{}{}
+    \entry{Ivanov2014}{book}{}{}
       \name{author}{1}{}{%
         {{hash=9f759e40ca34f7a4eff8e36d856840d9}{%
            family={Ivanov},
@@ -47,7 +47,7 @@
       \verb 10.13140/RG.2.1.2714.8960
       \endverb
     \endentry
-    \entry{PETRICEK2021}{book}{}{}
+    \entry{Petricek2021}{book}{}{}
       \name{author}{1}{}{%
         {{hash=589db46c6768c184355ed542b56d1887}{%
            family={Petríček},
@@ -78,7 +78,7 @@
       \field{title}{Revenue management v ubytovacích službách. Výstavba stochastického optimalizačního modelu}
       \field{year}{2021}
     \endentry
-    \entry{ANDERSONXIE2016}{article}{}{}
+    \entry{AndersonXia2016}{article}{}{}
       \name{author}{2}{}{%
         {{hash=fa0dfb4aba4c4ec7a787924c4f83b462}{%
            family={Anderson},
@@ -99,8 +99,8 @@
       \strng{authornamehash}{1bc46130dca2f335a1b4d49015f0580a}
       \strng{authorfullhash}{1bc46130dca2f335a1b4d49015f0580a}
       \strng{authorfullhashraw}{1bc46130dca2f335a1b4d49015f0580a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Journal of Revenue Management}
@@ -120,7 +120,7 @@
       \verb https://www.inderscienceonline.com/doi/abs/10.1504/IJRM.2016.077029
       \endverb
     \endentry
-    \entry{FIORI2020102332}{article}{}{}
+    \entry{Fiori2020102332}{article}{}{}
       \name{author}{2}{}{%
         {{hash=bfd360ded1e856dff5089bd7af1ea336}{%
            family={Fiori},
@@ -141,8 +141,8 @@
       \strng{authornamehash}{2a2bc7ea6464aca7762378652728a2a0}
       \strng{authorfullhash}{2a2bc7ea6464aca7762378652728a2a0}
       \strng{authorfullhashraw}{2a2bc7ea6464aca7762378652728a2a0}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{With a few notable exceptions, airlines and hospitality forecasting research has been focused so far on point predictions of customers’ bookings. However, Revenue Management decisions are subject to a much greater risk when based exclusively on point predictions. To overcome this drawback, we propose a stochastic framework that allows the construction of prediction intervals for reservation-based (pickup) forecasting methods, which are widely used in the industry. Moreover, we introduce an extension of the multiplicative pickup technique based on Generalized Linear Models. We test the proposed framework with real reservation data from a medium-sized hotel on Lake Maggiore (Italy) and we obtain more efficient prediction intervals relative to classical time series methods. Our approach can be useful to hotel revenue managers that wish to make more informed decisions, planning alternative pricing and room allocation strategies for a range of possible demand scenarios.}
@@ -164,48 +164,7 @@
       \endverb
       \keyw{Hotel demand forecasting,Multiplicative model,Pickup forecasting technique,Prediction intervals}
     \endentry
-    \entry{PIMENTEL2019}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=9386a1a289d1f75848fff4b352d78823}{%
-           family={Pimentel},
-           familyi={P\bibinitperiod},
-           given={Victor},
-           giveni={V\bibinitperiod}}}%
-        {{hash=c57492a938debdb9be1355cb5cfc6032}{%
-           family={Aizezikali},
-           familyi={A\bibinitperiod},
-           given={Aishajiang},
-           giveni={A\bibinitperiod}}}%
-        {{hash=15aadd4b31a354652dbc145afb095eb9}{%
-           family={Baker},
-           familyi={B\bibinitperiod},
-           given={Timothy},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{b9c0de20c89a9089ec3d976656b56e63}
-      \strng{fullhash}{510df86aa981cbef50ab0fcc4e64ae98}
-      \strng{fullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
-      \strng{bibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
-      \strng{authorbibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
-      \strng{authornamehash}{b9c0de20c89a9089ec3d976656b56e63}
-      \strng{authorfullhash}{510df86aa981cbef50ab0fcc4e64ae98}
-      \strng{authorfullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Computers & Industrial Engineering}
-      \field{month}{09}
-      \field{title}{Hotel Revenue Management: Benefits of Simultaneous Overbooking and Allocation Problem Formulation in Price Optimization}
-      \field{volume}{137}
-      \field{year}{2019}
-      \field{pages}{106073}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1016/j.cie.2019.106073
-      \endverb
-    \endentry
-    \entry{BITRAN2003overview}{article}{}{}
+    \entry{Bitran2003overview}{article}{}{}
       \name{author}{2}{}{%
         {{hash=c3dffa5cb5a19b798d8c9d789d14ee4b}{%
            family={Bitran},
@@ -242,6 +201,101 @@
       \range{pages}{27}
       \verb{doi}
       \verb 10.1287/msom.5.3.203.16031
+      \endverb
+    \endentry
+    \entry{Schwartz2025}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=e5cc2ebd8b482aa388967ff54b0a2739}{%
+           family={Schwartz},
+           familyi={S\bibinitperiod},
+           given={Zvi},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=a44056c1ebae66be28f249f1ff9e2ac2}{%
+           family={Webb},
+           familyi={W\bibinitperiod},
+           given={Timothy\bibnamedelima D.},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=6376497cfb9c3a2b55283e7a02681c21}{%
+           family={Altin},
+           familyi={A\bibinitperiod},
+           given={Mehmet},
+           giveni={M\bibinitperiod}}}%
+        {{hash=478b0c07f280dddfd1d4816caa1c5f6c}{%
+           family={Riasi},
+           familyi={R\bibinitperiod},
+           given={Arash},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ceba0c86f7759a60cb9243c7af2b06e}
+      \strng{fullhash}{32e05243d6e5b5051d8512acc439c6bf}
+      \strng{fullhashraw}{32e05243d6e5b5051d8512acc439c6bf}
+      \strng{bibnamehash}{32e05243d6e5b5051d8512acc439c6bf}
+      \strng{authorbibnamehash}{32e05243d6e5b5051d8512acc439c6bf}
+      \strng{authornamehash}{2ceba0c86f7759a60cb9243c7af2b06e}
+      \strng{authorfullhash}{32e05243d6e5b5051d8512acc439c6bf}
+      \strng{authorfullhashraw}{32e05243d6e5b5051d8512acc439c6bf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Overbooking is a widespread revenue-management practice, designed to counter losses associated with cancellations, no shows, and early departures. However, positive outcomes are not guaranteed because its contribution depends on the accuracy of the forecast, and the cost of overselling, including a potential long-term negative impact on customer satisfaction, reputation, loyalty and demand. This study aims to empirically assess the impact of overbooking on hotel performance and to compare the effectiveness of different overbooking approaches. Using real hotel performance data from multiple properties, we conducted t-tests and weight-adjusted regression analyses employing Huber/White sandwich estimators to evaluate the relationship between overbooking strategies and RevPAR indices. We find that overbooking hotels appear to outperform those that don’t, and that the less common, short-term oriented, risk-based method to set overbooking levels is associated with higher RevPAR Indices. The long-term, customer centric approach does not appear to be beneficial.}
+      \field{issn}{0278-4319}
+      \field{journaltitle}{International Journal of Hospitality Management}
+      \field{title}{Overbooking and performance in hotel revenue management}
+      \field{volume}{129}
+      \field{year}{2025}
+      \field{pages}{104192}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ijhm.2025.104192
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S027843192500115X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S027843192500115X
+      \endverb
+      \keyw{Overbooking,Performance,Revenue management,Risk-based,Deterministic heuristics}
+    \endentry
+    \entry{Pimentel2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=9386a1a289d1f75848fff4b352d78823}{%
+           family={Pimentel},
+           familyi={P\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=c57492a938debdb9be1355cb5cfc6032}{%
+           family={Aizezikali},
+           familyi={A\bibinitperiod},
+           given={Aishajiang},
+           giveni={A\bibinitperiod}}}%
+        {{hash=15aadd4b31a354652dbc145afb095eb9}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9c0de20c89a9089ec3d976656b56e63}
+      \strng{fullhash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{fullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{bibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authorbibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authornamehash}{b9c0de20c89a9089ec3d976656b56e63}
+      \strng{authorfullhash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authorfullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers & Industrial Engineering}
+      \field{month}{09}
+      \field{title}{Hotel Revenue Management: Benefits of Simultaneous Overbooking and Allocation Problem Formulation in Price Optimization}
+      \field{volume}{137}
+      \field{year}{2019}
+      \field{pages}{106073}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cie.2019.106073
       \endverb
     \endentry
   \enddatalist

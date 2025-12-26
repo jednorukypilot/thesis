@@ -1,5 +1,5 @@
 \chapter{Pricing Mechanisms in Accommodation Services}
-Pricing in accommodation services is a complex decision-making problem that involves working with multiple factors. This section describes mechanisms necessary for effective pricing strategies in the accommodation sector. We will discuss what mechanism will be used to approach dynamic pricing, what factors influence pricing decisions. The problem is formalized in terms of relevant parameters of our revenue management case. Finally we discuss principal approach to setting prices which will be developed into a formal model in subsequent chapter.
+Pricing in accommodation services is a complex decision-making problem that involves working with multiple factors. This section describes mechanisms necessary for effective pricing strategies in the accommodation sector. We will discuss what mechanism will be used to approach dynamic pricing, what factors influence pricing decisions. The problem is formalized in terms of relevant parameters of our revenue management case. Finally, we will propose principles that will be developed into a formal model in subsequent chapter.
 
 There are several key components to effective revenue management in accommodation services. Namely it is
 \begin{itemize}
@@ -11,18 +11,44 @@ There are several key components to effective revenue management in accommodatio
     \item Implementation
     \item Monitoring and control
 \end{itemize}
-\cite{IVANOV2014}. In this chapter we will focus on the processes behind first five components, which are essential for understanding the pricing mechanisms in accommodation services. With main focus of this thesis being \textit{forecasting} and \textit{optimization process and pricing decisions}. The last two components, \textit{implementation} and \textit{monitoring and control}, are important for correct execution of the pricing strategy at the operational level but as they are much more managerial in nature and depend heavily on concrete organization and human resources \cite{PETRICEK2021}, they will not be discussed in detail in this thesis.
+\cite{Ivanov2014}. In this chapter we will discuss the processes behind first five components, which are essential for understanding the pricing mechanisms in accommodation services. With main focus of this thesis being \textit{forecasting} and \textit{and pricing decisions}. The last two components, \textit{implementation} and \textit{monitoring and control}, are important for correct execution of the pricing strategy at the operational level but as they are much more managerial in nature and depend heavily on concrete organization and human resources \cite{Petricek2021}, they will not be discussed in detail in this thesis.
 
 
-Our model will utilize - POPSAT A ODARGUMENTOVAT ZAKLADNI FINKCIONALITU MODELU
+This thesis further proposes a novel dynamic pricing model for accommodation services, which will be described in detail in the following chapters. The model presents a data driven approach to automatize price settings based heavily on correct demand prediction and historical selling data. The approach is motivated by the accessibility of sales data. Such data should be available to most operational managers in the accommodation industry \cite{Ivanov2014}, as maintaining sales records is standard practice and often even legal obligation. Furthermore, collecting demand-related data via web scraping has become more feasible than ever due to the widespread use of online booking platforms and AI tools. The purpose of this model is to simplify and help to set benchmarks for pricing decisions in operational processes of short term accommodation providers.
 
 \section{Capacity Management}
 
-Price management in accommodation services is not heavily researched topic \cite{ANDERSONXIE2016}, many of the existing work bring very basic methods to the problem. Approaches are often borrowed from other industries, such as airline industry. These two industries are very similar in the sense that both are trying to maximize revenue through optimal allocation of finite resources to customers with stochastic behavior and willingness to pay. However, the airline industry is in many ways specific and main focus of the research is on point predictions of demand \cite{FIORI2020102332} and segmentation of customers in purpose and time. The airline industry is famously focused on overbooking, which can be effective even in hospitality industry and some models are built around optimizing allocation with overbooking in mind. \cite{PIMENTEL2019} 
+Price management in accommodation services is not heavily researched topic \cite{AndersonXia2016}, many of the existing work bring very basic methods to the problem. Approaches are often borrowed from other industries, such as airline industry. These two industries are very similar in the sense that both are trying to maximize revenue through optimal allocation of finite resources to customers with stochastic behavior and willingness to pay \cite{Fiori2020102332}. However, the airline industry is in many ways specific and different from accommodation industry \cite{Bitran2003overview} let alone short-term non-hotel properties. This segment of the industry is often characterized by smaller providers with limited capacity and relative lack of flexibility in terms of service offerings. Therefore, not all methods and approaches are directly applicable to accommodation services. Accommodation industry has its own specific requirements and revenue management methods must be adapted to these needs.
 
+\subsection{Segmentation}
 
+Basis for effective capacity management is understanding of the accommodation market in terms of its segments. The definition of these segments is very specific to concrete accommodation provider and range of offered services. However, in general, the resulting market segments should fulfill following criteria \cite{Ivanov2014}:
+\begin{itemize}
+    \item Discrete
+    \item Mutually exclusive
+    \item Measurable
+    \item Accessible
+    \item Profitable
+    \item Stable
+\end{itemize}
+Segmentation can be done based on various factors. The most basic segmentation factors include \cite{Petricek2021}:
+\begin{itemize}
+    \item Purpose of stay (business or leisure)
+    \item Group size (individual, families or group travelers)
+    \item Booking time (early bookers vs. last minute bookers)
+    \item Length of stay
+\end{itemize}
+These basic segmentation factors are particularly useful due to their compatibility with standard records maintained by accommodation providers. While not exhaustive, they can be further refined using additional variables such as demographics, distribution channels, customer behavior, and other relevant characteristics \cite{Ivanov2014}. Accurate identification of market segments is a key element of effective revenue management.
 
-However, overbooking is a relatively well-researched topic as one of the more traditional revenue management problems \cite{BITRAN2003overview}. In the use case of our model, overbooking is not a viable method, as the rules and constraints imposed by some online travel agencies and distribution channels do not allow it.
+The traditional purpose of segmentation is mainly to develop profiles of potential customers. These profiles are compared to strengths and weaknesses of specific accommodation provider to choose the fitting customers and marketing streams \cite{Ivanov2014}. In the case of our model, the importance of segmentation is twofold. Beyond its marketing function, segmentation plays a critical role in data analysis. Correct identification of segmentation factors in sales data ensures that the units in managed portfolio are correctly matched to distinct market segments. This alignment is essential for using historical booking and pricing data to accurately use methods for demand forecasting and setting pricing for each segment.
+
+Correct identification of customer segments is a key component of revenue management as a whole. Accurate segmentation helps to correctly select market segments that align with the provider's goals and service capabilities \cite{Petricek2021}. At the same time, it enables more meaningful data analysis allowing historical data to be interpreted within the appropriate segment context.
+
+\subsection{Overbooking}
+Overbooking is one of the traditional methods of capacity management famously heavily adopted by the airline industry. That is also why it is a relatively well-researched topic within revenue management problems. This method can be effective even in the hospitality industry and some models are built around optimizing allocation with overbooking in mind \cite{Pimentel2019}. However, short-term non-hotel accommodation services often face specific challenges that limit the applicability of overbooking strategies. These properties typically have limited capacity and a general lack of flexibility in accommodating guests. Furthermore, rules and constraints imposed by some online travel agencies (OTAs) and distribution channels do not allow for a simple implementation of overbooking. This makes it difficult to manage the risks associated with overbooking and use these strategies effectively unlike in larger hotel services \cite{Schwartz2025} or the airline industry.
+
+\paragraph*{}
+In the context of non-hotel accommodation services and the model presented in this thesis, traditional capacity management methods are often not directly applicable. Segmentation remains an essential data analysis tool, as precise segmentation of the managed portfolio enables more accurate demand forecasting and, consequently, better pricing decisions. The applicability of overbooking strategies is limited by the operational characteristics of this type of accommodation. Therefore, our data-driven approach focuses on realistic demand prediction as the foundation of the pricing strategy. The underlying structure of the model allows for the incorporation of overbooking strategies into the revenue management framework, ensuring that the model remains flexible and adaptable to various operational contexts within the accommodation industry.
 
 \section{Price Mechanisms}
 Elasticita poptavky, stochasticke chovani zakazniku, vliv konkurence, sezonnost, udalosti, pocasi, trendy.

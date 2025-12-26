@@ -382,6 +382,8 @@ INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ts1
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT ./chap02.tex
 INPUT ./chap02.tex
 OUTPUT tmp/chap02.aux
