@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber tmp/thesis"] 0 "tmp/thesis.bcf" "tmp/thesis.bbl" "tmp/thesis" 1766881644.55734 -1
+["biber tmp/thesis"] 0 "tmp/thesis.bcf" "tmp/thesis.bbl" "tmp/thesis" 1766881683.70204 -1
   "bibliography.bib" 1766782435 6146 28d7aa5421ce13ad8425aad3a3dcab71 ""
-  "tmp/thesis.bcf" 1766881644 109666 e8dbb66d1be3bf553d9c4ef8dfc3f0de "pdflatex"
+  "tmp/thesis.bcf" 1766881683 109666 e8dbb66d1be3bf553d9c4ef8dfc3f0de "pdflatex"
   (generated)
   "tmp/thesis.bbl"
   "tmp/thesis.blg"
   (rewritten before read)
-["pdflatex"] 1766881642.93384 "c:/Users/jrp/OneDrive/Dokuments/My Documents/School/MFF/Mathematics/Finanční Matematika/thesis/source/LaTex/thesis.tex" "thesis.pdf" "thesis" 1766881644.55804 2
+["pdflatex"] 1766881682.0773 "c:/Users/jrp/OneDrive/Dokuments/My Documents/School/MFF/Mathematics/Finanční Matematika/thesis/source/LaTex/thesis.tex" "thesis.pdf" "thesis" 1766881683.70276 2
   "abbreviations.tex" 1766875527 244 4643e98c4d1941f0131729eb60502ea6 ""
   "bibliography.tex" 1752411559 1003 0d63f4a77a923a019279c26abaf27fb9 ""
   "c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1742054532 2375 baa924870cfb487815765f9094cf3728 ""
@@ -207,21 +207,21 @@
   "thesis.tex" 1766881216 6190 5d24811e683683730503870ef8962102 ""
   "thesis.toc" 0 -1 0 ""
   "title.tex" 1752411629 3499 3722b63164fdef11cd30de5378cb829c ""
-  "tmp/abbreviations.aux" 1766881644 4509 e3059f79c97499302c5760c48f280e29 "pdflatex"
-  "tmp/bibliography.aux" 1766881644 4499 348a7fa365171522cf332858b37a48c1 "pdflatex"
-  "tmp/chap01.aux" 1766881644 5467 3b713e16dac3a3c41ee5f6e00cacf15e "pdflatex"
-  "tmp/chap02.aux" 1766881644 5025 26eb531b7f94f2e16349a9919c4d9a6f "pdflatex"
-  "tmp/epilog.aux" 1766881644 4491 045728c3eb4da602c6fae33b7891bd58 "pdflatex"
-  "tmp/pdfa.xmpi" 1766881643 6055 9df7f792ed39598f01f3eca6c405ca4e "pdflatex"
-  "tmp/preface.aux" 1766881644 4490 43d594385dc0a6d44a07da1d6e23cf7b "pdflatex"
-  "tmp/thesis.aux" 1766881644 2721 05bf12516fb534e02b8ad4659e78d67e "pdflatex"
+  "tmp/abbreviations.aux" 1766881683 4509 e3059f79c97499302c5760c48f280e29 "pdflatex"
+  "tmp/bibliography.aux" 1766881683 4499 348a7fa365171522cf332858b37a48c1 "pdflatex"
+  "tmp/chap01.aux" 1766881683 5467 3b713e16dac3a3c41ee5f6e00cacf15e "pdflatex"
+  "tmp/chap02.aux" 1766881683 5025 26eb531b7f94f2e16349a9919c4d9a6f "pdflatex"
+  "tmp/epilog.aux" 1766881683 4491 045728c3eb4da602c6fae33b7891bd58 "pdflatex"
+  "tmp/pdfa.xmpi" 1766881682 6055 3fadf08501fad7128531f398bfc103f3 "pdflatex"
+  "tmp/preface.aux" 1766881683 4490 43d594385dc0a6d44a07da1d6e23cf7b "pdflatex"
+  "tmp/thesis.aux" 1766881683 2721 05bf12516fb534e02b8ad4659e78d67e "pdflatex"
   "tmp/thesis.bbl" 1766879735 14563 7b79b12872a11386728d16d720a95446 "biber tmp/thesis"
-  "tmp/thesis.lof" 1766881644 60 35b3ba4c48b0bf046560cd0a3baa68f3 "pdflatex"
-  "tmp/thesis.lot" 1766881644 60 35b3ba4c48b0bf046560cd0a3baa68f3 "pdflatex"
-  "tmp/thesis.out" 1766881644 3211 2b93696eae948d77d63678f7d1a2a4e5 "pdflatex"
-  "tmp/thesis.toc" 1766881644 1542 b7cc14cdb9674ca0564d8580b3ac4fd7 "pdflatex"
-  "tmp/thesis.xmpdata" 1766881643 744 f39f34e5f29bbfbd39b16a1685bcc736 "pdflatex"
-  "tmp/title.aux" 1766881644 4393 7f59e3755d769576c4247ecf7c50bfa4 "pdflatex"
+  "tmp/thesis.lof" 1766881683 60 35b3ba4c48b0bf046560cd0a3baa68f3 "pdflatex"
+  "tmp/thesis.lot" 1766881683 60 35b3ba4c48b0bf046560cd0a3baa68f3 "pdflatex"
+  "tmp/thesis.out" 1766881683 3211 2b93696eae948d77d63678f7d1a2a4e5 "pdflatex"
+  "tmp/thesis.toc" 1766881683 1542 b7cc14cdb9674ca0564d8580b3ac4fd7 "pdflatex"
+  "tmp/thesis.xmpdata" 1766881682 744 f39f34e5f29bbfbd39b16a1685bcc736 "pdflatex"
+  "tmp/title.aux" 1766881683 4393 7f59e3755d769576c4247ecf7c50bfa4 "pdflatex"
   "xmp.tex" 1752411559 1063 9052166811eedcd13bd9abdcd6b4c155 ""
   (generated)
   "thesis.pdf"
