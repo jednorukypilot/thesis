@@ -203,6 +203,47 @@
       \verb 10.1287/msom.5.3.203.16031
       \endverb
     \endentry
+    \entry{Pimentel2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=9386a1a289d1f75848fff4b352d78823}{%
+           family={Pimentel},
+           familyi={P\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=c57492a938debdb9be1355cb5cfc6032}{%
+           family={Aizezikali},
+           familyi={A\bibinitperiod},
+           given={Aishajiang},
+           giveni={A\bibinitperiod}}}%
+        {{hash=15aadd4b31a354652dbc145afb095eb9}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9c0de20c89a9089ec3d976656b56e63}
+      \strng{fullhash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{fullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{bibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authorbibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authornamehash}{b9c0de20c89a9089ec3d976656b56e63}
+      \strng{authorfullhash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authorfullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers & Industrial Engineering}
+      \field{month}{09}
+      \field{title}{Hotel Revenue Management: Benefits of Simultaneous Overbooking and Allocation Problem Formulation in Price Optimization}
+      \field{volume}{137}
+      \field{year}{2019}
+      \field{pages}{106073}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cie.2019.106073
+      \endverb
+    \endentry
     \entry{Schwartz2025}{article}{}{}
       \name{author}{4}{}{%
         {{hash=e5cc2ebd8b482aa388967ff54b0a2739}{%
@@ -256,47 +297,6 @@
       \verb https://www.sciencedirect.com/science/article/pii/S027843192500115X
       \endverb
       \keyw{Overbooking,Performance,Revenue management,Risk-based,Deterministic heuristics}
-    \endentry
-    \entry{Pimentel2019}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=9386a1a289d1f75848fff4b352d78823}{%
-           family={Pimentel},
-           familyi={P\bibinitperiod},
-           given={Victor},
-           giveni={V\bibinitperiod}}}%
-        {{hash=c57492a938debdb9be1355cb5cfc6032}{%
-           family={Aizezikali},
-           familyi={A\bibinitperiod},
-           given={Aishajiang},
-           giveni={A\bibinitperiod}}}%
-        {{hash=15aadd4b31a354652dbc145afb095eb9}{%
-           family={Baker},
-           familyi={B\bibinitperiod},
-           given={Timothy},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{b9c0de20c89a9089ec3d976656b56e63}
-      \strng{fullhash}{510df86aa981cbef50ab0fcc4e64ae98}
-      \strng{fullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
-      \strng{bibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
-      \strng{authorbibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
-      \strng{authornamehash}{b9c0de20c89a9089ec3d976656b56e63}
-      \strng{authorfullhash}{510df86aa981cbef50ab0fcc4e64ae98}
-      \strng{authorfullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Computers & Industrial Engineering}
-      \field{month}{09}
-      \field{title}{Hotel Revenue Management: Benefits of Simultaneous Overbooking and Allocation Problem Formulation in Price Optimization}
-      \field{volume}{137}
-      \field{year}{2019}
-      \field{pages}{106073}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1016/j.cie.2019.106073
-      \endverb
     \endentry
   \enddatalist
 \endrefsection
