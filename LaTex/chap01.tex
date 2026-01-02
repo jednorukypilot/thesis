@@ -18,7 +18,7 @@ This thesis further proposes a novel dynamic pricing model for accommodation ser
 
 \section{Capacity Management}
 
-Price management in accommodation services is not heavily researched topic \cite{AndersonXia2016}, many of the existing work bring very basic methods to the problem. Approaches are often borrowed from other industries, such as airline industry. These two industries are very similar in the sense that both are trying to maximize revenue through optimal allocation of finite resources to customers with stochastic behavior and willingness to pay \cite{Fiori2020102332}. However, the airline industry is in many ways specific and different from accommodation industry \cite{Bitran2003overview} let alone short-term non-hotel properties. This segment of the industry is often characterized by smaller providers with limited capacity and relative lack of flexibility in terms of service offerings. Therefore, not all methods and approaches are directly applicable to accommodation services. Accommodation industry has its own specific requirements and revenue management methods must be adapted to these needs.
+Price management in accommodation services is not heavily researched topic \cite{AndersonXia2016}, many of the existing work bring very basic methods to the problem. Approaches are often borrowed from other industries, such as airline industry. These two industries are very similar in the sense that both are trying to maximize revenue through optimal allocation of finite resources to customers with stochastic behavior and willingness to pay \cite{Fiori2020}. However, the airline industry is in many ways specific and different from accommodation industry \cite{Bitran2003overview} let alone short-term non-hotel properties. This segment of the industry is often characterized by smaller providers with limited capacity and relative lack of flexibility in terms of service offerings. Therefore, not all methods and approaches are directly applicable to accommodation services. Accommodation industry has its own specific requirements and revenue management methods must be adapted to these needs.
 
 \subsection{Segmentation}
 
@@ -90,9 +90,17 @@ Pricing mechanisms in accommodation services must account for the complex interp
 \section{Demand Prediction}
 % rozebrat zpusoby predikce poptavky. linearni regrese az strojove uceni.
 
-Accurate demand prediction is crucial for effective pricing strategies in accommodation services. Understanding future demand patterns allows providers to optimize pricing decisions and maximize revenue. Various methods can be employed for demand forecasting, ranging from traditional statistical techniques to advanced machine learning algorithms. In this section, we briefly outline some of the commonly used forecasting approaches and discuss their applicability. As demand prediction forms the core of the proposed pricing model, particular attention is given to its role in enabling proposed data-driven and adaptive revenue management.
+Demand prediction is crucial for effective pricing strategies in accommodation services. Understanding future demand patterns allows providers to optimize pricing decisions and maximize revenue. Various methods can be employed for demand forecasting, ranging from traditional statistical techniques to advanced machine learning algorithms. In this section, we briefly outline some of the commonly used forecasting approaches and discuss their applicability.
+
+Accurate demand prediction forms the core of the proposed pricing model. Its effectiveness depends primarily on the quality of the forecasts, making the choice of an appropriate method particularly important. While the selected method can have significant impact on the overall performance of the pricing strategy, the underlying structure of the model can accommodate any forecasting technique that produces suitable output.
 
 \subsection{Statistical prediction}
+Traditional statistical methods for demand forecasting include time series analysis, moving averages, and exponential smoothing \cite{Petricek2021}. These methods rely on historical data to identify patterns and trends that can be extrapolated into the future.
+
+
+
+
+Time series models such as ARIMA (AutoRegressive Integrated Moving Average) are particularly popular for their ability to capture seasonality and trends in data. These models are relatively simple to implement and interpret, making them accessible for many accommodation providers. However, they may struggle to capture complex patterns in data, especially when multiple influencing factors are at play.
 
 \subsection{Machine learning predictions}
 
