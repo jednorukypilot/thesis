@@ -90,20 +90,79 @@ Pricing mechanisms in accommodation services must account for the complex interp
 \section{Demand Prediction}
 % rozebrat zpusoby predikce poptavky. linearni regrese az strojove uceni.
 
-Demand prediction is crucial for effective pricing strategies in accommodation services. Understanding future demand patterns allows providers to optimize pricing decisions and maximize revenue. Various methods can be employed for demand forecasting, ranging from traditional statistical techniques to advanced machine learning algorithms. In this section, we briefly outline some of the commonly used forecasting approaches and discuss their applicability.
+Demand prediction is crucial for effective pricing strategies in accommodation services. Understanding future demand patterns allows providers to optimize pricing decisions and maximize revenue. Various methods can be employed for demand forecasting, ranging from traditional statistical techniques to advanced machine learning algorithms \cite{Ampountolas2024}. In this section, we briefly outline some of the commonly used forecasting approaches and discuss their applicability.
 
-Accurate demand prediction forms the core of the proposed pricing model. Its effectiveness depends primarily on the quality of the forecasts, making the choice of an appropriate method particularly important. While the selected method can have significant impact on the overall performance of the pricing strategy, the underlying structure of the model can accommodate any forecasting technique that produces suitable output.
-
-\subsection{Statistical prediction}
-Traditional statistical methods for demand forecasting include time series analysis, moving averages, and exponential smoothing \cite{Petricek2021}. These methods rely on historical data to identify patterns and trends that can be extrapolated into the future.
+Demand forecasting approaches can be generally divided into two main categories: purely regression-based methods and time series analysis methods \cite{Petricek2021}. As our proposed pricing model is data-driven and relies heavily on historical sales data, we will focus on these two categories of forecasting methods.
 
 
+\subsection{Demand structure}
+The goal of quantitative demand prediction is to accurately estimate future demand. Regarding methods utilizing time series analysis of historical data to predict future demand patterns, it is essential to understand the key components that occur in demand data \cite{Petricek2021}. These components include:
+\begin{itemize}
+    \item \textbf{Trend}: The long-term movement in demand data, which can be upward, downward, or stable over time.
+    \item \textbf{Seasonality}: Regular often significant patterns that repeat over specific time periods.
+    \item \textbf{Cyclicality}: Fluctuations in demand that occur over longer periods and are often influenced by economic or market conditions.
+    \item \textbf{Irregular components}: Random variations in demand that cannot be attributed to trend, seasonality, or cyclicality. These are often caused by unforeseen events or anomalies.
+\end{itemize}
+Different forecasting techniques may be better suited to capture specific components, and a combination of methods may be necessary to achieve optimal results for a given environment.
+
+Intention of trend modeling is to accurately capture the underlying direction of demand over time. This can be achieved using various techniques, such as moving averages, exponential smoothing, or polynomial regression. Trend modeling is particularly important for long-term demand forecasting. However, using methods like moving averages for trend modeling deletes seasonal patterns from the data, which can be detrimental for shorter-term forecasts \cite{Petricek2021}.
+
+Seasonality modeling is particularly important for the aim of this thesis, as accommodation services often experience significant seasonal fluctuations in demand. "Seasonal" in this sense can mean both regular patterns occurring within selected periods (e.g., weekly or monthly) and irregular patterns caused by holidays and events. Capturing seasonality accurately is crucial for effective demand forecasting and pricing decisions.
+
+Common methods for seasonality modeling include regression with several seasonal variables, seasonal decomposition of time series, and seasonal ARIMA models \cite{Petricek2021}. These methods help to isolate and quantify the seasonal effects in demand data.
+
+\subsection{Forecasting methods}
+One very basic method of Demand prediction that is relatively popular in practice is naive forecasting \cite{Petricek2021}. This method simply assumes that future demand will be equal some historical demand value. It could be written as:
+\begin{equation}
+    \hat{D}_{t+h|t} = D_{t+h-m}
+\end{equation}
+where $\hat{D}_{t+h|t}$ is the forecasted demand for period $t+h$ made at time $t$, $D_{t+h-m}$ is the actual demand observed in the same period $h$ but $m$ periods ago (e.g., one year ago if $m$ corresponds to one year). While this method is easy to implement and understand, by itself it often fails to capture important patterns in the data, leading to suboptimal forecasts.
+
+Moving averages represent another simple method for demand forecasting. This technique smooths out short-term fluctuations and highlights longer-term trends by averaging demand over a specified number of past periods. The moving average forecast can be expressed as:
+\begin{equation}
+    \hat{D}_{t+h|t} = \frac{1}{n} \sum_{i=0}^{n-1} D_{t-i}
+\end{equation}
+where $n$ is the number of periods used in the moving average. While this method can be effective for capturing trends, it may not adequately account for seasonality or irregular components in the data. Predictions made by moving averages reflect different patterns depending on the chosen window size $n$. For larger $n$, the predictions will be smoother and less responsive to recent changes, while smaller $n$ will make the forecasts more sensitive to recent fluctuations but potentially more volatile \cite{Petricek2021}.
+
+Exponential smoothing methods are more advanced techniques extending the idea of moving averages approach by using all previous data points but giving exponentially decreasing weights to older observations. This approach allows for more responsive forecasts. Simple exponential smoothing
+\begin{equation}
+    \hat{D}_{t+1|t} = \alpha D_t + (1 - \alpha) \hat{D}_{t|t-1}
+\end{equation}
+sets the forecast $\hat{D}_{t+1|t}$ as a weighted average of the most recent actual demand $D_t$ and the previous forecast $\hat{D}_{t|t-1}$, with $0<\alpha<1$ being the smoothing parameter that determines the weight given to the most recent observation. These methods use weighted averages of historical data to create forecasts \cite{Ampountolas2024}. There are many concrete methods implementing this idea in some way \cite{Petricek2021}.
+
+Another commonly used approach to demand forecasting is based on statistical regression. A particularly popular variant of linear regression combines a polynomial time trend with seasonal dummy variables to account for both long-term patterns and recurring seasonal effects \cite{Petricek2021}. This method is effective for modeling seasonality by fitting a trend component along with categorical indicators for each seasonal period:
+
+\begin{equation}
+    \hat{D}_{t|t-1} = \beta_0 + \beta_1 t + \sum_{i=1}^{k-1} \gamma_i M_{i,t}
+\end{equation}
+
+Here, $M_{i,t}$ are dummy variables representing seasonal periods (e.g., months or days of the week), and one dummy is omitted to avoid multicollinearity.
+
+This model structure allows the regression to capture non-linear growth or decline over time as well as recurring seasonal patterns. It is particularly useful in forecasting yearly or multi-year demand cycles where seasonality is regular and observable. This approach remains popular due to its simplicity and ease of interpretation but can lack in flexibility and the ability to capture complex seasonal structures \cite{Petricek2021}.
+
+To address such temporal structures, time series models like SARIMA (Seasonal AutoRegressive Integrated Moving Average) are used. SARIMA extends the classic autocorrelation ARIMA model by including seasonal terms, making it suitable for forecasting demand that exhibits both trend and seasonal variation. SARIMA models account for autocorrelation, differencing to remove trends, and seasonal lags, and are usually denoted as:
+
+\begin{equation}
+    SARIMA(p,d,q)(P,D,Q)_s
+\end{equation}
+
+where $(p,d,q)$ are the non-seasonal orders (autoregression, differencing, and moving average), $(P,D,Q)$ are the seasonal counterparts, and $s$ is the seasonality period (e.g., $s = 7$ for weekly seasonality) \cite{KumarDubey2021}. SARIMA models can produce reliable forecasts when historical patterns are stable, but they typically require more parameter tuning and analysis.
+
+The most modern methods for demand forecasting are machine learning algorithms. These methods can capture complex patterns in time series data and often outperform traditional statistical techniques, especially when dealing with large datasets with multiple influencing factors. Extreme Gradient Boosting (XGBoost) and Random Forests are popular choices for demand prediction tasks. These algorithms can handle non-linear relationships and interactions between variables, making them suitable for complex demand forecasting scenarios. XGBoost, in particular, has gained popularity due to its ability to handle large datasets effectively \cite{Ampountolas2024}. These methods require careful data engineering and fine-tuning to achieve optimal performance but can provide significant improvements in forecast accuracy.
 
 
-Time series models such as ARIMA (AutoRegressive Integrated Moving Average) are particularly popular for their ability to capture seasonality and trends in data. These models are relatively simple to implement and interpret, making them accessible for many accommodation providers. However, they may struggle to capture complex patterns in data, especially when multiple influencing factors are at play.
-
-\subsection{Machine learning predictions}
-
+\paragraph*{}
+Accurate demand prediction forms the core of the proposed pricing model. Its effectiveness depends primarily on the quality of demand forecasts, making the choice of an appropriate method particularly important. While the selected method can have significant impact on the overall performance of the pricing strategy, the underlying structure of the model can accommodate any forecasting technique that produces suitable output. This flexibility allows the model to adapt to various environments and forecasting capabilities of different accommodation providers as well as to future advancements in demand prediction methods.
 
 \section{Price Setting}
-% klasicka maximalizace revenue rovnice a nas pristup k nastaveni ceny
+In its most basic formulation, the problem of optimal pricing can be expressed as a revenue maximization task:
+
+\begin{equation}
+    \max_{P} R(P) = D(P) \cdot P
+\end{equation}
+
+where $D(P)$ is the demand as a function of price $P$, and $R(P)$ is the resulting revenue. This expression assumes full knowledge of the demand function including price demand elasticity, which is rarely available in real-world settings. Estimating the precise relationship between price and demand is often complicated by unobserved factors, data sparsity, and the influence of external variables.
+
+While many theoretical models aim to solve this optimization problem numerically, there is limited empirical evidence showing that such approaches consistently outperform experienced human revenue managers in practice \cite{Rust2018OptimalDH}. Human experts often rely on intuition, context, and accumulated experience to make pricing decisions that are well-calibrated to the specific market and operational constraints.
+
+Our approach does not attempt to directly solve the optimal pricing problem. Instead, it focuses on forecasting demand accurately, and then deriving prices based on the observed relationship between demand and price in historical sales data. This implicitly incorporates the expertise of human decision-makers encoded in past pricing behavior. While this may not lead to analytically optimal prices in the strict mathematical sense, it provides a practical and scalable way to automate pricing decisions in line with historically effective strategies and with  potential for improvement through further analysis and refinement.

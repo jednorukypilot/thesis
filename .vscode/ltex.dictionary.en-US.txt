@@ -1,1 +1,3 @@
 endogeneity
+SARIMA
+autoregression
