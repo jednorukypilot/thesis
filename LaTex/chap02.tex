@@ -1,4 +1,6 @@
-\chapter{Mathematical Model for Dynamic Pricing in Accommodation Services}
+\chapter{Mathematical Model for Dynamic Accommodation Pricing}
+
+The following chapter introduces a novel pricing model that combines statistical demand forecasting with a probabilistic approach to price suggestion. The model is designed to assist operational decision-making in short-term accommodation by leveraging historical sales data and anticipated occupancy levels. It is structured in two interconnected stages. First, future demand is estimated using a time series forecasting method (SARIMA), chosen for its interpretability and suitability for capturing seasonality in reservation data. This step produces an estimate of expected occupancy for each future date. In the second stage, the model uses historical occupancy and pricing data to infer the most appropriate price for the predicted demand level. This is achieved by estimating a conditional probability distribution of prices given occupancy, effectively capturing the historical behavior of human revenue managers under similar market conditions projected into predicted demand. A price is then selected as a quantile of this distribution, offering a data-based yet flexible mechanism to reflect managerial preferences regarding risk and competitiveness.
 
 \section{Model Objectives}
 

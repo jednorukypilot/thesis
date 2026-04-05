@@ -1,5 +1,5 @@
 \chapter{Pricing Mechanisms in Accommodation Services}
-Pricing in accommodation services is a complex decision-making problem that involves working with multiple factors. This section describes mechanisms necessary for effective pricing strategies in the accommodation sector. We will discuss what mechanism are being used to approach dynamic pricing, what factors influence pricing decisions. The problem is formalized in terms of relevant parameters of our revenue management case. Finally, we will propose principles that will be developed into a formal model in subsequent chapter.
+Pricing in accommodation services is a complex decision-making problem that involves working with multiple factors. This section describes mechanisms used for effective pricing strategies in the accommodation sector. We will discuss what mechanism are being used to approach dynamic pricing, what factors influence pricing decisions. The problem is formalized in terms of relevant parameters of a revenue management case. Finally, we will propose principles that will be developed into a formal model in subsequent chapter.
 
 There are several key components to effective revenue management in accommodation services. Namely it is
 \begin{itemize}
@@ -13,8 +13,7 @@ There are several key components to effective revenue management in accommodatio
 \end{itemize}
 \cite{Ivanov2014}. In this chapter we will discuss the processes behind first five components, which are essential for understanding the pricing mechanisms in accommodation services. With main focus of this thesis being \textit{forecasting} and \textit{and pricing decisions}. The last two components, \textit{implementation} and \textit{monitoring and control}, are important for correct execution of the pricing strategy at the operational level but as they are much more managerial in nature and depend heavily on concrete organization and human resources \cite{Petricek2021}, they will not be discussed in detail in this thesis.
 
-
-This thesis further proposes a novel dynamic pricing model for accommodation services, which will be described in detail in the following chapters. The model presents a data driven approach to automatize price settings based heavily on correct demand prediction and historical selling data. The approach is motivated by the accessibility of sales data. Such data should be available to most operational managers in the accommodation industry \cite{Ivanov2014}, as maintaining sales records is standard practice and often even legal obligation. Furthermore, collecting demand-related data via web scraping has become more feasible than ever due to the widespread use of online booking platforms and AI tools. The purpose of this model is to simplify and help to set benchmarks for pricing decisions in operational processes of short term accommodation providers.
+A dynamic pricing model in proposed in subsequent chapter of this thesis, the approach to pricing predictions by this model is motivated by accessibility of real world sales data. Data that should be available to most operational managers in the accommodation industry, as maintaining sales records is standard practice and often even legal obligation. \cite{Ivanov2014} Furthermore, collecting demand-related data via web scraping has become more feasible than ever due to the widespread use of online booking platforms and AI tools. The purpose of this model is to simplify and help to set benchmarks for pricing decisions in operational processes of short term accommodation providers. So the aspects of revenue management will be discussed within this context of the later proposed model.
 
 \section{Capacity Management}
 
@@ -22,7 +21,7 @@ Price management in accommodation services is not heavily researched topic \cite
 
 \subsection{Segmentation}
 
-Basis for effective capacity management is understanding of the accommodation market in terms of its segments. The definition of these segments is very specific to concrete accommodation provider and range of offered services. However, in general, the resulting market segments should fulfill following criteria \cite{Ivanov2014}:
+Basis for effective capacity management is understanding of the accommodation market in terms of its segments. The definition of these segments is very specific to each particular accommodation provider and range of offered services. However, in general, the resulting market segments should fulfill following criteria \cite{Ivanov2014}:
 \begin{itemize}
     \item Discrete
     \item Mutually exclusive
@@ -70,8 +69,8 @@ Estimating price elasticity of demand (PED) in practice requires historical data
 \end{equation}
 In this formulation, the coefficient $\beta_1$ directly represents the price elasticity of demand \cite{Petricek2021}.
 
-However, in real-world historical data, price and demand often exhibit a positive correlation. This is primarily due to the finite-resource nature of accommodation services, where high-demand periods typically coincide with higher prices.
-This phenomenon is illustrated in Figure~\ref{fig:price_demand_corr}, where long term real-world booking data show a positive correlation between price and demand, as price increases during high-demand periods.
+However, in raw historical sales data, price and demand often exhibit a positive correlation. This is primarily due to the finite-resource nature of accommodation services, where high-demand periods typically coincide with higher prices.
+This phenomenon is illustrated in Figure~\ref{fig:price_demand_corr}, where long term real-world booking data show a positive correlation between price and demand, as price can and does increase during high-demand periods.
 
 \begin{figure}[ht]
     \centering
@@ -82,10 +81,10 @@ This phenomenon is illustrated in Figure~\ref{fig:price_demand_corr}, where long
 
 This positive correlation arises because both price and demand are influenced by external factors such as seasonality, market trends, and special events. For instance, during peak travel seasons or major events, both the willingness to pay and the actual demand for accommodation increase simultaneously. The situation can be also explained by customer segmentation analysis, as Leisure customers often have limited flexibility in their travel schedules, while business travelers tend to have lower price sensitivity in general \cite{Ivanov2014}.
 
-Reliably estimating PED from historical selling data is challenging due to this endogeneity. More accurate estimation of PED using analytical methods could be achieved through advanced heuristics and precise segmentation applied to historical sales data or through  different methods such as controlled experimentation \cite{Petricek2021}. However, these approaches would require extensive data collection and analysis efforts, which may not be feasible for many accommodation providers.
+Reliably estimating PED from historical selling data is challenging due to this endogeneity. More accurate estimation of PED from historical data could be achieved through using extensive analytical methods, advanced heuristics and precise segmentation or through different methods such as controlled experimentation \cite{Petricek2021}. However, this could be prohibitively difficult for many accommodation providers, as it would require extensive market data collection and analysis efforts in order to cover all possible segments and market conditions.
 
 \paragraph*{}
-Pricing mechanisms in accommodation services must account for the complex interplay between price, demand, and external factors such as seasonality and market trends. Price elasticity of demand is useful and common tool for understanding consumer behavior. However, estimation of Price Elasticity of Demand from historical sales data is greatly complicated by the phenomenon of higher prices during high-demand periods. While advanced methods could provide more accurate estimates, reliable estimation would likely be very resource intensive and challenging. Therefore, our proposed approach focuses on robust demand forecasting methods while utilizing the correlation between price and demand found in historical selling data to form dynamic pricing decisions.
+Pricing mechanisms in accommodation services must account for the complex interplay between price, demand, and external factors such as seasonality and market trends. Price elasticity of demand is useful and common tool for understanding consumer behavior. However, estimation of price elasticity of demand from historical sales data is greatly complicated by the difficulty of correct data segmentation in order to keep external factors constant. While advanced methods could provide more accurate estimates, reliable estimation would likely be very resource intensive and challenging. Therefore, our proposed approach focuses on robust demand forecasting methods while utilizing the correlation between price and demand found in historical selling data instead of estimating price elasticity to form dynamic pricing decisions.
 
 \section{Demand Prediction}
 % rozebrat zpusoby predikce poptavky. linearni regrese az strojove uceni.
@@ -101,7 +100,7 @@ The goal of quantitative demand prediction is to accurately estimate future dema
     \item \textbf{Trend}: The long-term movement in demand data, which can be upward, downward, or stable over time.
     \item \textbf{Seasonality}: Regular often significant patterns that repeat over specific time periods.
     \item \textbf{Cyclicality}: Fluctuations in demand that occur over longer periods and are often influenced by economic or market conditions.
-    \item \textbf{Irregular components}: Random variations in demand that cannot be attributed to trend, seasonality, or cyclicality. These are often caused by unforeseen events or anomalies.
+    \item \textbf{Irregular components}: Random variations in demand that cannot be attributed to trend, seasonality, or cyclicality. These are often caused by unforeseen or irregular events and anomalies.
 \end{itemize}
 Different forecasting techniques may be better suited to capture specific components, and a combination of methods may be necessary to achieve optimal results for a given environment.
 
@@ -162,4 +161,5 @@ where $D(P)$ is the demand as a function of price $P$, and $R(P)$ is the resulti
 
 While many theoretical models aim to solve this optimization problem numerically, there is limited empirical evidence showing that such approaches consistently outperform experienced human revenue managers in practice \cite{Rust2018OptimalDH}. Human experts often rely on intuition, context, and accumulated experience to make pricing decisions that are well-calibrated to the specific market and operational constraints.
 
-Approach of the model proposed in this thesis does not attempt to directly solve the optimal pricing problem. Instead, it focuses on forecasting demand accurately, and then deriving prices based on the observed relationship between demand and price in historical sales data. This implicitly incorporates the expertise of human decision-makers encoded in past pricing behavior. While this may not lead to analytically optimal prices in the strict mathematical sense, it provides a practical and scalable way to automate pricing decisions in line with historically effective strategies and with  potential for improvement through further analysis and refinement.
+\paragraph*{}
+Approach of the model proposed in this thesis does not attempt to directly solve the optimal pricing problem. It focuses on forecasting demand accurately, and then deriving prices based on the observed relationship between demand and price in historical sales data. This implicitly incorporates the expertise of human decision-makers encoded in past pricing behavior. While this may not lead to analytically optimal prices in the strict mathematical sense, it provides a practical and scalable way to automate pricing decisions in line with historically effective strategies and with  potential for improvement through further analysis and refinement.
