@@ -3,8 +3,100 @@
 The following chapter introduces a novel pricing model that combines statistical demand forecasting with a probabilistic approach to price suggestion. The model is designed to assist operational decision-making in short-term accommodation by leveraging historical sales data and anticipated occupancy levels. It is structured in two interconnected stages. First, future demand is estimated using a time series forecasting method (SARIMA), chosen for its interpretability and suitability for capturing seasonality in reservation data. This step produces an estimate of expected occupancy for each future date. In the second stage, the model uses historical occupancy and pricing data to infer the most appropriate price for the predicted demand level. This is achieved by estimating a conditional probability distribution of prices given occupancy, effectively capturing the historical behavior of human revenue managers under similar market conditions projected into predicted demand. A price is then selected as a quantile of this distribution, offering a data-based yet flexible mechanism to reflect managerial preferences regarding risk and competitiveness.
 
 \section{Model Objectives}
+The objective of the proposed model is to provide data-driven price recommendations for short-term accommodation providers and to serve as a simple and accessible revenue management tool. The model does not strictly optimize for maximizing revenue or profit, as is common in traditional revenue management models. Instead, it is designed as a decision-support tool that captures the historical relationship between occupancy levels and pricing decisions and aims to provide data-driven and interpretable price recommendations based on predicted demand conditions.
 
-\section{Demand Prediction}
-% ARIMA a vystup je poptavane mnozstvi v jednotlivych dnech pro dany segment portfolia
+For selected apartment segments, the model forecasts future occupancy levels and provides apartment-specific price recommendations for each apartment on selected future dates that reflect historical pricing behavior under similar demand conditions. The model's flexibility allows it to be adapted to different market contexts and revenue preferences through the selection of model parameters.
 
-\section{Title of the second subchapter of the second chapter}
+By combining statistical demand forecasting with probabilistic modeling of historical pricing and demand behavior, the model provides a flexible framework that can adapt to different revenue management strategies.
+\section{Data Aggregation and Preprocessing}
+Data available to reservation managers usually come in the form of individual reservation records, containing details such as check-in and check-out dates, price paid, number of guests, etc. This model operates on aggregated data describing market conditions on a daily basis rather than individual reservations. Therefore, the raw observation data must be transformed into a daily time series describing demand and pricing conditions for each day and selected segment of apartments.
+
+Let $a = 1, 2, \ldots, A$ denote apartments from the analyzed segment and $t = 1, 2, \ldots, T$ denote days in the analyzed period. The following variables are constructed for each day $t$ and apartment $a$. Let $y_{a,t}$ be the number of beds sold for apartment $a$ on day $t$, $c_a$ be the total capacity - number of beds available in apartment $a$. The occupancy rate for apartment segment on day $t$ is then calculated as:
+\begin{equation}
+    o_t = \frac{\sum_{a=1}^A y_{a,t}}{\sum_{a=1}^A c_a}
+\end{equation}
+
+As each apartment may differ in characteristics like size and location and thus have different typical pricing levels, it is necessary to account for these differences to ensure consistent price predictions across the selected segment. To achieve this, prices are normalized relative to a base price calculated for each apartment. Therefore, let $p_{a,t}$ be the realized price per bed for apartment $a$ on day $t$. The base price  $\bar{p}_a$ for apartment $a$ is defined as the average price per bed across all days in the analyzed historical period.
+
+\begin{equation}
+    \bar{p}_a = \frac{1}{T} \sum_{t=1}^T p_{a,t}
+\end{equation}
+
+To capture the overall price level of the segment on day $t$, a relative price index $r_t$ is constructed as the bed-weighted average of relative realized prices across all apartments.
+
+\begin{equation}
+    r_t=
+    \frac{\sum_{a=1}^{A} y_{a,t}\left(\frac{p_{a,t}}{\bar{p}_a}\right)}
+    {\sum_{a=1}^{A} y_{a,t}}.
+\end{equation}
+
+This index then represents the average realized price level relative to the historical baseline across all beds sold within the segment on day $t$. It serves as a key variable in the model, capturing the overall pricing conditions in the market for that day.
+
+Finally, the resulting historical sample is defined as the set of observed occupancy and relative price pairs over the selected historical period:
+
+\begin{equation}
+    \mathcal D = {\{(o_t, r_t)\}}_{t=1}^T,
+\end{equation}
+
+The importance of this sample lies in capturing the historical relationship between occupancy levels and pricing decisions, which is crucial for the second stage of the model where pricing decisions are made based on predicted occupancy.
+
+
+\section{Demand Forecasting with SARIMA}
+The first stage of the proposed model consists of forecasting future demand conditions represented by the occupancy rate of the selected apartment segment. As defined in the previous section, the historical occupancy time series is given by ${o_t}$.
+
+To predict future occupancy levels, the SARIMA (Seasonal Autoregressive Integrated Moving Average) model is applied to the historical occupancy time series. SARIMA was selected for its ability to capture both long term trend and seasonal variations commonly present in accommodation occupancy data, as discussed in section 1.3.2.
+
+The SARIMA model produces forecasts of occupancy for future days $t>T$ denoted as
+
+\begin{equation}
+    \hat{o}_t = f_{SARIMA}(o_{t-1}, o_{t-2}, \ldots),
+\end{equation}
+
+Predicted occupancy levels $\hat{o}_t$ are used as primary input for the second stage of the model, where price recommendations are determined based on the historical relationship between occupancy levels and realized prices.
+
+
+\section{Estimation of Historical Occupancy-Price Distribution}
+The second stage of the proposed model is based on the assumption that historical pricing decisions encode valuable managerial knowledge about appropriate price levels under given demand conditions. Therefore, the historical sample $\mathcal D$ is used to estimate the relationship between occupancy levels and realized relative prices. This relationship is captured as a joint probability density function of random variables $O$ and $R$, corresponding to observed values of occupancy rate $o_t$ and relative price $r_t$, respectively.
+
+\begin{equation}
+    P((O,R) \in A) = \int_A f_{O,R}(o,r) do dr,
+\end{equation}
+
+Since the functional form of the joint density $f_{O,R}(o,r)$ is unknown, it must be estimated from the observed historical sample. For this purpose, a non-parametric Kernel Density Estimation (KDE) approach is used. KDE estimates the density at a point $(o,r)$ as a weighted average of observed sample points, where weights decrease with increasing distance from the evaluated point.
+
+The estimated density function can be expressed as
+
+\begin{equation}
+    \hat{f}_{O,R}(o,r) =
+    \frac{1}{n h_O h_R}
+    \sum_{i=1}^{n}
+    K\left(\frac{o-o_i}{h_O}\right)
+    K\left(\frac{r-r_i}{h_R}\right), \quad \text{where } n = |\mathcal D|
+\end{equation}
+
+Each observation $(o_i,r_i)$ contributes to the estimated density through a kernel function $K(\cdot)$, centered at the observation and scaled by bandwidth parameters $h_O$ and $h_R$. These bandwidths determine the degree of smoothing in each dimension and therefore control the trade-off between sensitivity to local variation and smoothness of the resulting estimate.
+
+\section{Pricing decision}
+The predicted occupancy level $\hat{o}_t$ for a future day $t$ is finally used with the estimated joint density $\hat{f}_{O,R}(o,r)$ to derive a price recommendation. Combining these two estimates produces the conditional distribution of relative prices given the predicted demand condition - occupancy level $\hat{o}_t$. The conditional density of relative price $R$ given estimated occupancy $O = \hat{o}_t$ is calculated as follows:
+
+\begin{equation}
+    \hat{f}_{R|O}(r|\hat{o}_t) =
+    \frac{\hat{f}_{O,R}(\hat{o}_t,r)}{\int_{-\infty}^{\infty} \hat{f}_{O,R}(\hat{o}_t,u) du}
+\end{equation}
+
+This conditional density represents the distribution of historically observed pricing decisions under similar occupancy conditions. To derive a specific price recommendation from this distribution, a quantile-based approach is used. The recommended relative price $r^*_t$ is selected as the value corresponding to the $\alpha$-quantile of the conditional distribution.
+
+\begin{equation}
+    r^*_t =
+    \inf \left\{r: \int_{-\infty}^r \hat{f}_{R|O}(x|\hat{o}_t) dx \geq \alpha \right\}
+\end{equation}
+
+Here, $\alpha \in (0,1)$ is a parameter reflecting the desired balance between competitiveness and revenue maximization in pricing decisions.
+
+The resulting recommended relative price $r_t^*$ serves as a pricing coefficient for the selected future day $t$. The final recommended price per bed for each apartment $a$ is calculated by multiplying the apartment-specific base price $\bar{p}_a$ by this coefficient:
+
+\begin{equation}
+    p_{a,t}^* = r_t^* \cdot \bar{p}_a
+\end{equation}
+
+This approach produces apartment-specific price recommendations while capturing all available information encoded in the historical data and preserving the relative differences in typical pricing levels across the selected segment.

@@ -480,6 +480,8 @@ OUTPUT chap02.aux
 INPUT ./chap02.tex
 INPUT ./chap02.tex
 INPUT chap02.tex
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT ./epilog.tex
 INPUT ./epilog.tex
 OUTPUT epilog.aux
@@ -542,6 +544,7 @@ INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/l
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb
