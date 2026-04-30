@@ -61,9 +61,9 @@ Formally, price elasticity of demand $E_{pd}$ is defined as the change in quanti
 \begin{equation}
     E_{pd} = \frac{\Delta Q / Q}{\Delta P / P} = \frac{\Delta Q}{\Delta P} \cdot \frac{P}{Q}
 \end{equation}
-where $Q$ is the quantity demanded, $P$ is the price. The value of PED provides insights into consumer behavior. Negative PED indicates that an increase in price leads to a decrease in demanded quantity, which is typical for most goods. The magnitude represents the degree of sensitivity of demand to price changes.
+where $Q$ is the quantity demanded, $P$ is the price. The value of price elasticity of demand (PED) provides insights into consumer behavior. Negative PED indicates that an increase in price leads to a decrease in demanded quantity, which is typical for most goods. The magnitude represents the degree of sensitivity of demand to price changes.
 
-Estimating price elasticity of demand (PED) in practice requires historical data on both prices and quantities sold. A common approach is to fit a functional relationship between price and demand using regression analysis, where the logarithmic form is often preferred due to its ability to linearize the elasticity expression. Specifically, the constant elasticity demand function can be expressed as:
+Estimating PED in practice requires historical data on both prices and quantities sold. A common approach is to fit a functional relationship between price and demand using regression analysis, where the logarithmic form is often preferred due to its ability to linearize the elasticity expression. Specifically, the constant elasticity demand function can be expressed as:
 \begin{equation}
     \log(Q) = \beta_0 + \beta_1 \log(P) + \varepsilon
 \end{equation}
@@ -98,8 +98,8 @@ Demand forecasting approaches can be generally divided into two main categories:
 The goal of quantitative demand prediction is to accurately estimate future demand. Regarding methods utilizing time series analysis of historical data to predict future demand patterns, it is essential to understand the key components that occur in demand data \cite{Petricek2021}. These components include:
 \begin{itemize}
     \item \textbf{Trend}: The long-term movement in demand data, which can be upward, downward, or stable over time.
-    \item \textbf{Seasonality}: Regular often significant patterns that repeat over specific time periods.
-    \item \textbf{Cyclicality}: Fluctuations in demand that occur over longer periods and are often influenced by economic or market conditions.
+    \item \textbf{Seasonality}: Regular, often significant patterns that repeat over known periods (e.g., weekly or annual cycles). This distinguishes seasonality from a periodic component, where the period is fixed but unknown in advance.
+    \item \textbf{Cyclicality}: Fluctuations in demand that occur over variable, often longer periods, making cyclicality considerably harder to model. These fluctuations are typically driven by broader economic or market forces; the economic cycle is a common example.
     \item \textbf{Irregular components}: Random variations in demand that cannot be attributed to trend, seasonality, or cyclicality. These are often caused by unforeseen or irregular events and anomalies.
 \end{itemize}
 Different forecasting techniques may be better suited to capture specific components, and a combination of methods may be necessary to achieve optimal results for a given environment.
