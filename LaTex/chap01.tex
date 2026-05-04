@@ -50,8 +50,6 @@ Overbooking is one of the traditional methods of capacity management famously he
 In the context of non-hotel accommodation services and the model presented in this thesis, traditional capacity management methods are often not directly applicable. Segmentation remains an essential data analysis tool, as precise segmentation of the managed portfolio enables more accurate demand forecasting and, consequently, better pricing decisions. The applicability of overbooking strategies is limited by the operational characteristics of this type of accommodation. Therefore, our data-driven approach focuses on realistic demand prediction as the foundation of the pricing strategy. The underlying structure of the model allows for the incorporation of overbooking strategies into the revenue management framework, ensuring that the model remains flexible and adaptable to various operational contexts within the accommodation industry.
 
 \section{Price Mechanisms}
-% Elasticita poptavky, tezke sehnat dobra data pro odhad - sezonnost, udalosti, trendy se projevuji vic.
-
 Pricing is a central component of revenue management. Deep understanding of pricing mechanisms is essential for informed decision-making in accommodation services. This thesis does not aim to address all aspects of pricing strategies, as these have been comprehensively covered in existing literature \cite{Ivanov2014, Petricek2021}. Instead, it focuses on key principles of dynamic pricing and their relationship to observable customer behavior patterns in this finite-resource environment, particularly in response to seasonality, trends, or events. The goal of this section is to establish foundation for the data-driven pricing model presented in subsequent chapters.
 
 \subsection{Price elasticity of demand}
@@ -74,7 +72,7 @@ This phenomenon is illustrated in Figure~\ref{fig:price_demand_corr}, where long
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/price_demand_corr.png}
+    \includegraphics[width=0.6\textwidth]{figures/price_demand_corr.png}
     \caption{Correlation between price and demand in real-world booking data}
     \label{fig:price_demand_corr}
 \end{figure}
@@ -87,8 +85,6 @@ Reliably estimating PED from historical selling data is challenging due to this 
 Pricing mechanisms in accommodation services must account for the complex interplay between price, demand, and external factors such as seasonality and market trends. Price elasticity of demand is useful and common tool for understanding consumer behavior. However, estimation of price elasticity of demand from historical sales data is greatly complicated by the difficulty of correct data segmentation in order to keep external factors constant. While advanced methods could provide more accurate estimates, reliable estimation would likely be very resource intensive and challenging. Therefore, our proposed approach focuses on robust demand forecasting methods while utilizing the correlation between price and demand found in historical selling data instead of estimating price elasticity to form dynamic pricing decisions.
 
 \section{Demand Prediction}
-% rozebrat zpusoby predikce poptavky. linearni regrese az strojove uceni.
-
 Demand prediction is crucial for effective pricing strategies in accommodation services. Understanding future demand patterns allows providers to optimize pricing decisions and maximize revenue. Various methods can be employed for demand forecasting, ranging from traditional statistical techniques to advanced machine learning algorithms \cite{Ampountolas2024}. In this section, we briefly outline some of the commonly used forecasting approaches and discuss their applicability.
 
 Demand forecasting approaches can be generally divided into two main categories: purely regression-based methods and time series analysis methods \cite{Petricek2021}. As our proposed pricing model is data-driven and relies heavily on historical sales data, we will focus on these two categories of forecasting methods.
