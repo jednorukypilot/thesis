@@ -21,7 +21,7 @@
 \def\ThesisAuthor{\xxx{Ondřej Mareček}}
 
 % Year when the thesis is submitted
-\def\YearSubmitted{\xxx{2025}}
+\def\YearSubmitted{\xxx{2026}}
 
 % Name of the department or institute, where the work was officially assigned
 % (according to the Organizational Structure of MFF UK in English,
@@ -44,24 +44,18 @@
 % An optional dedication: you can thank whomever you wish (your supervisor,
 % consultant, who provided you with tea and pizza, etc.)
 \def\Dedication{%
-    \xxx{Dedication.}
+    \xxx{I would like to thank my supervisor, Petr Lachout, for his guidance and helpful feedback on this project. I would also like to thank Jakub Schinkman for his help with the data and for his insights into the practical aspects of accommodation management. Finally, I would like to thank my family and friends for their support and encouragement throughout my studies, as well as Ludwig van Beethoven, whose Seventh Symphony provided peace of mind when it was needed the most.}
 }
 
 % Abstract (recommended length around 80-200 words; this is not a copy of your thesis assignment!)
 \def\Abstract{%
-    \xxx{Use the most precise, shortest sentences that state what problem the
-        thesis addresses, how it is approached, pinpoint the exact result achieved, and
-        describe the applications and significance of the results. Highlight anything
-        novel that was discovered or improved by the thesis. Maximum length is 200
-        words, but try to fit into 120. Abstracts are often used for deciding if
-        a reviewer will be suitable for the thesis; a well-written abstract thus
-        increases the probability of getting a reviewer who will like the thesis.}
+    This thesis addresses the problem of dynamic pricing for short-term accommodation providers. A two-stage data-driven pricing model is proposed that operates on historical reservation data routinely available to accommodation operators. In the first stage, future occupancy is forecast using a Seasonal AutoRegressive Integrated Moving Average (SARIMA) model. In the second stage, price recommendations are derived as quantiles of the conditional price distribution, estimated non-parametrically using kernel density estimation of historical occupancy–price pairs. The model is evaluated on a dataset of 1,645 anonymized reservation records from 13 Prague apartments spanning 182 days. The SARIMA component achieves a Mean Absolute Error of 7.84\% on a held-out test period. The resulting price recommendations reflect historically observed pricing behavior under comparable demand conditions, while avoiding the need for external market data or explicit estimation of price elasticity.
 }
 
 % 3 to 5 keywords (recommended) separated by \sep
 % Keywords are useful for indexing and searching for the theses by topic.
 \def\ThesisKeywords{%
-    \xxx{keyword\sep key phrase}
+    dynamic pricing\sep revenue management\sep demand forecasting\sep SARIMA\sep kernel density estimation
 }
 
 % If any of your metadata strings contains TeX macros, you need to provide

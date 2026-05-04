@@ -1,0 +1,442 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Ivanov2014}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f759e40ca34f7a4eff8e36d856840d9}{%
+           family={Ivanov},
+           familyi={I\bibinitperiod},
+           given={Stanislav},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{fullhash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{fullhashraw}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{bibnamehash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{authorbibnamehash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{authornamehash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{authorfullhash}{9f759e40ca34f7a4eff8e36d856840d9}
+      \strng{authorfullhashraw}{9f759e40ca34f7a4eff8e36d856840d9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-954-92786-3-7}
+      \field{month}{01}
+      \field{title}{Hotel Revenue Management: From Theory to Practice}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.13140/RG.2.1.2714.8960
+      \endverb
+    \endentry
+    \entry{Petricek2021}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=589db46c6768c184355ed542b56d1887}{%
+           family={Petríček},
+           familyi={P\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Praha}%
+      }
+      \list{publisher}{1}{%
+        {Wolters Kluwer}%
+      }
+      \strng{namehash}{589db46c6768c184355ed542b56d1887}
+      \strng{fullhash}{589db46c6768c184355ed542b56d1887}
+      \strng{fullhashraw}{589db46c6768c184355ed542b56d1887}
+      \strng{bibnamehash}{589db46c6768c184355ed542b56d1887}
+      \strng{authorbibnamehash}{589db46c6768c184355ed542b56d1887}
+      \strng{authornamehash}{589db46c6768c184355ed542b56d1887}
+      \strng{authorfullhash}{589db46c6768c184355ed542b56d1887}
+      \strng{authorfullhashraw}{589db46c6768c184355ed542b56d1887}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-80-7676-209-1}
+      \field{series}{Vydání první}
+      \field{title}{Revenue management v ubytovacích službách. Výstavba stochastického optimalizačního modelu}
+      \field{year}{2021}
+    \endentry
+    \entry{AndersonXia2016}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=fa0dfb4aba4c4ec7a787924c4f83b462}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Chris\bibnamedelima K.},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=16c1080ecff4de5d087c6954e01270d7}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Xiaoqing\bibnamedelima (Kristine)},
+           giveni={X\bibinitperiod\bibinitdelim (\bibinitperiod}}}%
+      }
+      \strng{namehash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{fullhash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{fullhashraw}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{bibnamehash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{authorbibnamehash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{authornamehash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{authorfullhash}{1bc46130dca2f335a1b4d49015f0580a}
+      \strng{authorfullhashraw}{1bc46130dca2f335a1b4d49015f0580a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Revenue Management}
+      \field{number}{2-3}
+      \field{title}{Dynamic pricing in hospitality: overview and opportunities}
+      \field{volume}{9}
+      \field{year}{2016}
+      \field{pages}{165\bibrangedash 174}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1504/IJRM.2016.077029
+      \endverb
+      \verb{urlraw}
+      \verb https://www.inderscienceonline.com/doi/abs/10.1504/IJRM.2016.077029
+      \endverb
+      \verb{url}
+      \verb https://www.inderscienceonline.com/doi/abs/10.1504/IJRM.2016.077029
+      \endverb
+    \endentry
+    \entry{Fiori2020}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=bfd360ded1e856dff5089bd7af1ea336}{%
+           family={Fiori},
+           familyi={F\bibinitperiod},
+           given={Anna\bibnamedelima Maria},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e9cad851d4585dcac88248cb64d243c8}{%
+           family={Foroni},
+           familyi={F\bibinitperiod},
+           given={Ilaria},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{fullhash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{fullhashraw}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{bibnamehash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{authorbibnamehash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{authornamehash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{authorfullhash}{2a2bc7ea6464aca7762378652728a2a0}
+      \strng{authorfullhashraw}{2a2bc7ea6464aca7762378652728a2a0}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With a few notable exceptions, airlines and hospitality forecasting research has been focused so far on point predictions of customers’ bookings. However, Revenue Management decisions are subject to a much greater risk when based exclusively on point predictions. To overcome this drawback, we propose a stochastic framework that allows the construction of prediction intervals for reservation-based (pickup) forecasting methods, which are widely used in the industry. Moreover, we introduce an extension of the multiplicative pickup technique based on Generalized Linear Models. We test the proposed framework with real reservation data from a medium-sized hotel on Lake Maggiore (Italy) and we obtain more efficient prediction intervals relative to classical time series methods. Our approach can be useful to hotel revenue managers that wish to make more informed decisions, planning alternative pricing and room allocation strategies for a range of possible demand scenarios.}
+      \field{issn}{0278-4319}
+      \field{journaltitle}{International Journal of Hospitality Management}
+      \field{title}{Prediction accuracy for reservation-based forecasting methods applied in Revenue Management}
+      \field{volume}{84}
+      \field{year}{2020}
+      \field{pages}{102332}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ijhm.2019.102332
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0278431918309022
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0278431918309022
+      \endverb
+      \keyw{Hotel demand forecasting,Multiplicative model,Pickup forecasting technique,Prediction intervals}
+    \endentry
+    \entry{Bitran2003overview}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c3dffa5cb5a19b798d8c9d789d14ee4b}{%
+           family={Bitran},
+           familyi={B\bibinitperiod},
+           given={Gabriel\bibnamedelima R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=87d88c604aa1d66739af016ea404d417}{%
+           family={Caldentey},
+           familyi={C\bibinitperiod},
+           given={René},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{fullhash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{fullhashraw}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{bibnamehash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{authorbibnamehash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{authornamehash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{authorfullhash}{3644d566f3c62b733c76b44d4eab03d5}
+      \strng{authorfullhashraw}{3644d566f3c62b733c76b44d4eab03d5}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Manufacturing \& Service Operations Management}
+      \field{number}{3}
+      \field{title}{An Overview of Pricing Models for Revenue Management}
+      \field{volume}{5}
+      \field{year}{2003}
+      \field{pages}{203\bibrangedash 229}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1287/msom.5.3.203.16031
+      \endverb
+    \endentry
+    \entry{Pimentel2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=9386a1a289d1f75848fff4b352d78823}{%
+           family={Pimentel},
+           familyi={P\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=c57492a938debdb9be1355cb5cfc6032}{%
+           family={Aizezikali},
+           familyi={A\bibinitperiod},
+           given={Aishajiang},
+           giveni={A\bibinitperiod}}}%
+        {{hash=15aadd4b31a354652dbc145afb095eb9}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9c0de20c89a9089ec3d976656b56e63}
+      \strng{fullhash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{fullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{bibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authorbibnamehash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authornamehash}{b9c0de20c89a9089ec3d976656b56e63}
+      \strng{authorfullhash}{510df86aa981cbef50ab0fcc4e64ae98}
+      \strng{authorfullhashraw}{510df86aa981cbef50ab0fcc4e64ae98}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers \& Industrial Engineering}
+      \field{month}{09}
+      \field{title}{Hotel Revenue Management: Benefits of Simultaneous Overbooking and Allocation Problem Formulation in Price Optimization}
+      \field{volume}{137}
+      \field{year}{2019}
+      \field{pages}{106073}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cie.2019.106073
+      \endverb
+    \endentry
+    \entry{Schwartz2025}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=e5cc2ebd8b482aa388967ff54b0a2739}{%
+           family={Schwartz},
+           familyi={S\bibinitperiod},
+           given={Zvi},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=a44056c1ebae66be28f249f1ff9e2ac2}{%
+           family={Webb},
+           familyi={W\bibinitperiod},
+           given={Timothy\bibnamedelima D.},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=6376497cfb9c3a2b55283e7a02681c21}{%
+           family={Altin},
+           familyi={A\bibinitperiod},
+           given={Mehmet},
+           giveni={M\bibinitperiod}}}%
+        {{hash=478b0c07f280dddfd1d4816caa1c5f6c}{%
+           family={Riasi},
+           familyi={R\bibinitperiod},
+           given={Arash},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ceba0c86f7759a60cb9243c7af2b06e}
+      \strng{fullhash}{32e05243d6e5b5051d8512acc439c6bf}
+      \strng{fullhashraw}{32e05243d6e5b5051d8512acc439c6bf}
+      \strng{bibnamehash}{32e05243d6e5b5051d8512acc439c6bf}
+      \strng{authorbibnamehash}{32e05243d6e5b5051d8512acc439c6bf}
+      \strng{authornamehash}{2ceba0c86f7759a60cb9243c7af2b06e}
+      \strng{authorfullhash}{32e05243d6e5b5051d8512acc439c6bf}
+      \strng{authorfullhashraw}{32e05243d6e5b5051d8512acc439c6bf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Overbooking is a widespread revenue-management practice, designed to counter losses associated with cancellations, no shows, and early departures. However, positive outcomes are not guaranteed because its contribution depends on the accuracy of the forecast, and the cost of overselling, including a potential long-term negative impact on customer satisfaction, reputation, loyalty and demand. This study aims to empirically assess the impact of overbooking on hotel performance and to compare the effectiveness of different overbooking approaches. Using real hotel performance data from multiple properties, we conducted t-tests and weight-adjusted regression analyses employing Huber/White sandwich estimators to evaluate the relationship between overbooking strategies and RevPAR indices. We find that overbooking hotels appear to outperform those that don’t, and that the less common, short-term oriented, risk-based method to set overbooking levels is associated with higher RevPAR Indices. The long-term, customer centric approach does not appear to be beneficial.}
+      \field{issn}{0278-4319}
+      \field{journaltitle}{International Journal of Hospitality Management}
+      \field{title}{Overbooking and performance in hotel revenue management}
+      \field{volume}{129}
+      \field{year}{2025}
+      \field{pages}{104192}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ijhm.2025.104192
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S027843192500115X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S027843192500115X
+      \endverb
+      \keyw{Overbooking,Performance,Revenue management,Risk-based,Deterministic heuristics}
+    \endentry
+    \entry{Ampountolas2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=9e1b07037a2734cb07f5f53ee0c12605}{%
+           family={Ampountolas},
+           familyi={A\bibinitperiod},
+           given={Apostolos},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e5a54c584fa4304b776afda06917458c}{%
+           family={Legg},
+           familyi={L\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{34617c12a15fda8521b330cf09a3f8e9}
+      \strng{fullhash}{34617c12a15fda8521b330cf09a3f8e9}
+      \strng{fullhashraw}{34617c12a15fda8521b330cf09a3f8e9}
+      \strng{bibnamehash}{34617c12a15fda8521b330cf09a3f8e9}
+      \strng{authorbibnamehash}{34617c12a15fda8521b330cf09a3f8e9}
+      \strng{authornamehash}{34617c12a15fda8521b330cf09a3f8e9}
+      \strng{authorfullhash}{34617c12a15fda8521b330cf09a3f8e9}
+      \strng{authorfullhashraw}{34617c12a15fda8521b330cf09a3f8e9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Revenue and Pricing Management}
+      \field{number}{3}
+      \field{title}{Predicting daily hotel occupancy: a practical application for independent hotels}
+      \field{volume}{23}
+      \field{year}{2024}
+      \field{pages}{197\bibrangedash 205}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1057/s41272-023-00445-7
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1057/s41272-023-00445-7
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1057/s41272-023-00445-7
+      \endverb
+    \endentry
+    \entry{KumarDubey2021}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=7beefff2f1e9cb7cb18a3166bc2bbc55}{%
+           family={{Kumar Dubey}},
+           familyi={K\bibinitperiod},
+           given={Ashutosh},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6f760ca30acf637bd3ec08e61e594522}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b0f42b557db137f6d97fd7baa1b7e73c}{%
+           family={García-Díaz},
+           familyi={G\bibinithyphendelim D\bibinitperiod},
+           given={Vicente},
+           giveni={V\bibinitperiod}}}%
+        {{hash=f13eff72ffcd703abd41ad6e61719461}{%
+           family={{Kumar Sharma}},
+           familyi={K\bibinitperiod},
+           given={Arpit},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bbab31d24444e0063f9aa1eeab71aab5}{%
+           family={Kanhaiya},
+           familyi={K\bibinitperiod},
+           given={Kishan},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{c881fe59758499c1d157c69e47505d21}
+      \strng{fullhash}{b2be00e37bd707614791e148eafe5c8c}
+      \strng{fullhashraw}{b2be00e37bd707614791e148eafe5c8c}
+      \strng{bibnamehash}{b2be00e37bd707614791e148eafe5c8c}
+      \strng{authorbibnamehash}{b2be00e37bd707614791e148eafe5c8c}
+      \strng{authornamehash}{c881fe59758499c1d157c69e47505d21}
+      \strng{authorfullhash}{b2be00e37bd707614791e148eafe5c8c}
+      \strng{authorfullhashraw}{b2be00e37bd707614791e148eafe5c8c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Energy consumption forecasting is essential for smart grid operations as it facilitates electricity demand management and utilities load planning. In this paper data analytics has been presented on the collected smart meter measurement and then predicting the energy consumption on a daily basis using (autoregressive integrated moving average) ARIMA, seasonal ARIMA (SARIMA) and long short-term memory (LSTM). The analysis tends to understand the different factors which influence energy consumption, and assist operators to make decisions accordingly. It is helpful in reducing the outage, and enhancing the situational awareness of power consumption on a daily basis of the smart meters. The relational factors are capable in lowering energy consumption, or rather contributing to the effective consumption of energy units. The parameters used for the result evaluation are various features of the weather features relation in terms of power consumption based on temperature, humidity, cloud cover, visibility, wind speed, UV index and dew point. The results indicate that the energy consumption has a high positive correlation with humidity and high negative correlation with temperature. (Dew point and UV index) and (Cloud cover and Visibility Display) have multicollinearity with temperature and humidity respectively, so, can be discarded. Pressure and Moon Phase have minimal correlation with energy consumption, so, it can also be discarded. Wind speed has low correlation with energy, but it does not show multicollinearity. So, it can be considered for further analysis. Overall LSTM found to be prominent in comparison to ARIMA and SARIMA with the average mean absolute error (MAE) of 0.23.}
+      \field{journaltitle}{Sustainable Energy Technologies and Assessments}
+      \field{title}{Study and analysis of SARIMA and LSTM in forecasting time series data}
+      \field{volume}{47}
+      \field{year}{2021}
+      \field{pages}{101474}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.seta.2021.101474
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2213138821004847
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2213138821004847
+      \endverb
+      \keyw{ARIMA,SARIMA,LSTM,Energy consumption,RMSE,MASE}
+    \endentry
+    \entry{Rust2018OptimalDH}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=d21cb42e5da1f3188f3684e88b665332}{%
+           family={Rust},
+           familyi={R\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=04bb9208b00fe3c5a48f005a49fe411e}{%
+           family={Cho},
+           familyi={C\bibinitperiod},
+           given={Sungjin},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Society for Economic Dynamics}%
+      }
+      \strng{namehash}{f19056ba6f77d2e22b5327c2bd52a913}
+      \strng{fullhash}{f19056ba6f77d2e22b5327c2bd52a913}
+      \strng{fullhashraw}{f19056ba6f77d2e22b5327c2bd52a913}
+      \strng{bibnamehash}{f19056ba6f77d2e22b5327c2bd52a913}
+      \strng{authorbibnamehash}{f19056ba6f77d2e22b5327c2bd52a913}
+      \strng{authornamehash}{f19056ba6f77d2e22b5327c2bd52a913}
+      \strng{authorfullhash}{f19056ba6f77d2e22b5327c2bd52a913}
+      \strng{authorfullhashraw}{f19056ba6f77d2e22b5327c2bd52a913}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{179}
+      \field{title}{Optimal Dynamic Hotel Pricing}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:13949676
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:13949676
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
