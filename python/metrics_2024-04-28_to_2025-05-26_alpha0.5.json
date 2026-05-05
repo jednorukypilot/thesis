@@ -1,0 +1,42 @@
+{
+  "config": {
+    "start_date": "2024-04-28",
+    "train_end_date": "2025-04-26",
+    "test_start_date": "2025-04-27",
+    "test_end_date": "2025-05-26",
+    "n_training_days": 364,
+    "n_test_days": 30,
+    "n_apartments": 12,
+    "total_capacity_beds": 57,
+    "pricing_quantile_alpha": 0.5
+  },
+  "sarima": {
+    "mae_pp": 7.2931,
+    "rmse_pp": 9.563,
+    "mean_bias_pp": 1.9651,
+    "std_observed_pp": 13.0005,
+    "std_predicted_pp": 8.3457,
+    "std_compression_ratio": 0.642,
+    "corr_occ_vs_error": -0.7778,
+    "naive_baseline_mae_pp": 9.3567,
+    "improvement_over_naive_pp": 2.0636,
+    "improvement_over_naive_pct": 22.05,
+    "low_demand_bias_pp": 9.6476,
+    "high_demand_bias_pp": -2.4826
+  },
+  "pricing": {
+    "n_evaluation_pairs": 290,
+    "mean_bias_pct": -4.17,
+    "mae_pct": 28.44,
+    "std_pct": 34.7,
+    "directional_accuracy": 51.72,
+    "low_demand_mean_bias_pct": -3.81,
+    "high_demand_mean_bias_pct": -4.31
+  },
+  "exp_trend": {
+    "selected_a": 0.563004,
+    "selected_b": 1.040531,
+    "full_a": 0.621092,
+    "full_b": 0.869255
+  }
+}
