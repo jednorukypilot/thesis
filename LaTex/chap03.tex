@@ -51,7 +51,7 @@ For illustration, a simplified example of the transformation process is shown in
 
 \section{Properties of Model Variables}
 
-The constructed time series is enriched by derived variables. The occupancy rate $o_t$ and relative price index $r_t$, as defined in Chapter 2, are constructed from the aggregated time series. The occupancy rate measures demand relative to capacity, while the relative price index normalizes price levels across apartments and time. The development of these variables over time is visualized in Figure~\ref{fig:timeseries_basic}. The figure illustrates the presence of seasonal patterns in both demand and price, and outlining their co-movement. This relationship is further highlighted in Figure~\ref{fig:price_demand}, which shows a positive dependence between the observed occupancy rate and relative price index. The moderate strength of this relationship is reflected in the Pearson correlation coefficient $\rho = 0.583$, although the relationship is not strictly linear and is better approximated by a nonlinear trend.
+The constructed time series is enriched by derived variables. The occupancy rate $o_t$ and relative price index $r_t$, as defined in Chapter~2, are constructed from the aggregated time series. The occupancy rate measures demand relative to capacity, while the relative price index normalizes price levels across apartments and time. The development of these variables over time is visualized in Figure~\ref{fig:timeseries_basic}. The figure illustrates the presence of seasonal patterns in both demand and price, and outlining their co-movement. This relationship is further highlighted in Figure~\ref{fig:price_demand}, which shows a positive dependence between the observed occupancy rate and relative price index. The moderate strength of this relationship is reflected in the Pearson correlation coefficient $\rho = 0.583$, although the relationship is not strictly linear and is better approximated by a nonlinear trend.
 
 \begin{figure}[ht]
     \centering
@@ -72,7 +72,7 @@ To forecast future occupancy levels, a SARIMA model was fitted to the historical
 
 The selected model corresponds to $\mathrm{SARIMA}(2,1,1)(1,0,2)_7$, capturing both short-term dynamics and weekly seasonal patterns in the data, with strong seasonal autoregressive component (approximately 0.99) that reflects the dependence of occupancy on values observed one week earlier. The inclusion of first-order differencing ($d=1$) indicates that the occupancy series exhibits non-stationary behavior, which is accounted for by modeling changes in occupancy over time. This is consistent with typical booking patterns in short-term accommodation markets.
 
-The forecasted occupancy rates for the test period are visualized in Figure~\ref{fig:sarima_forecast}. The model captures the overall trend and seasonal fluctuations in demand, although some deviations from actual values are observed, particularly during periods of high volatility.
+The forecasted occupancy rates for the test period are visualized in Figure~\ref{fig:sarima_forecast}. The model captures the overall trend and seasonal fluctuations in demand, although some deviations from actual values are observed, particularly during periods of high volatility. An evaluation of forecast accuracy is presented in Section~\ref{sec:results}.
 
 \begin{figure}[ht]
     \centering
@@ -80,10 +80,6 @@ The forecasted occupancy rates for the test period are visualized in Figure~\ref
     \caption{SARIMA model forecast of occupancy rates compared to actual values.}
     \label{fig:sarima_forecast}
 \end{figure}
-
-The model's performance was evaluated on a 30-day hold-out test period. The Mean Absolute Error (MAE) is 0.0729 and the Root Mean Squared Error (RMSE) is 0.0956. To contextualize these values, a seasonal naive baseline — which forecasts each day's occupancy as the value observed exactly one week prior — achieves a MAE of 0.0936. The SARIMA model reduces this error by 0.0206, corresponding to a 22.1\% improvement over the naive baseline, confirming that the model provides a meaningful improvement over baseline forecasting method.
-
-A closer examination of the forecast errors reveals a systematic smoothing effect. The standard deviation of predicted occupancy ($0.0835$) is only 64.2\% of the observed standard deviation ($0.1300$), and the Pearson correlation between actual occupancy and signed forecast error is $-0.778$. This indicates that the model compresses the range of demand variation: it systematically over-predicts on low-demand days (mean signed error $+0.0965$) and under-predicts on high-demand days (mean signed error $-0.0248$). This phenomenon is further discussed in Section~3.8.
 
 \section{Estimation of Occupancy–Price Distribution}
 The historical sample used for the price estimation stage consists of pairs $(o_t, r_t)$ constructed from the observed time series. This sample forms the empirical basis for estimating the relationship between occupancy and pricing. To capture this relationship, a joint probability density function of occupancy and relative price is estimated using a non-parametric Kernel Density Estimation (KDE) approach.
@@ -122,8 +118,9 @@ The final recommended price can be obtained as
 
 where $\bar{p}_{a}$ is the apartment-specific base price. As shown in Figure~\ref{fig:conditional_price_distribution}, the choice of $\alpha$ allows for flexibility in the resulting price recommendations, enabling adjustment of pricing strategies according to risk preferences, market conditions, or other relevant factors.
 
-\section{Generated Price Recommendations}
-Price recommendations generated by the model for the test period of 8 days and one selected apartment $a=5$ are summarized in Table~\ref{tab:generated_price_recommendations}, which compares the recommended prices to the observed prices and calculates the percentage difference between them. These prices are derived using the $\alpha=0.5$ quantile, which reflects typical historical pricing decisions rather than aggressive revenue-maximizing strategies. The results show that the recommended prices are generally lower than the observed prices. This underpricing can be attributed to two main factors: the use of a median-based pricing rule, which tends to produce conservative recommendations, and inaccuracies in demand forecasting, particularly during periods of rapidly changing demand.
+\section{Results and Evaluation}
+\label{sec:results}
+The model's performance was evaluated on the 30-day hold-out test period. Tables~\ref{tab:generated_price_recommendations} and~\ref{tab:generated_occupancy_recommendations} aim to illustrate the model output for selected apartment ($a=5$) over eight selected days (May 2–9, 2025), using the median quantile $\alpha=0.5$. These examples are mainly intended to show structure of typical output. The full evaluation of the model's performance across all apartments and days in the test period is presented in the subsequent analysis.
 
 \begin{table}[ht]
     \centering
@@ -146,8 +143,6 @@ Price recommendations generated by the model for the test period of 8 days and o
     \label{tab:generated_price_recommendations}
 \end{table}
 
-The occupancy predictions used for these recommendations are also compared to the observed occupancy levels in Table~\ref{tab:generated_occupancy_recommendations}. Results of the occupancy forecasts show that the model tends to overestimate occupancy levels during period of low demand, and underestimate them during periods of high demand. This pattern can be attributed to the smoothing effect of the SARIMA model (also evident in Figure~\ref{fig:sarima_forecast}), which captures overall trends and seasonality but may not fully capture short-term volatility in demand. The observed discrepancies between predicted and observed occupancy levels could contribute to the differences between recommended and observed prices, highlighting the importance of accurate demand forecasting for effective price optimization.
-
 \begin{table}[ht]
     \centering
     \small
@@ -169,8 +164,16 @@ The occupancy predictions used for these recommendations are also compared to th
     \label{tab:generated_occupancy_recommendations}
 \end{table}
 
+\medskip
+For demand forecasting using SARIMA model the Mean Absolute Error (MAE) is 0.0729 and the Root Mean Squared Error (RMSE) is 0.0956. As a reference point, a seasonal naive baseline — which forecasts each day's occupancy as the value observed exactly one week prior — achieves a MAE of 0.0936. The SARIMA model reduces this error by 0.0206, corresponding to a 22.1\% improvement over the naive baseline, confirming that the model provides a meaningful improvement over baseline forecasting method.
+
+A closer examination of the forecast errors reveals a systematic smoothing effect. The standard deviation of predicted occupancy ($0.0835$) is only 64.2\% of the observed standard deviation ($0.1300$), and the Pearson correlation between actual occupancy and signed forecast error is $-0.778$. This indicates that the model compresses the range of demand variation: it systematically over-predicts on low-demand days (mean signed error $+0.0965$) and under-predicts on high-demand days (mean signed error $-0.0248$). The smoothing is inherent to linear time series models and directly propagates into the pricing stage, as the KDE receives a less extreme occupancy input on both peak and trough days.
+
+To assess pricing performance, the model's recommendations at $\alpha=0.5$ are compared to observed transaction prices across all 13 apartments, yielding 290 apartment-day pairs. The recommended price bias is $-4.2\%$, indicating a small systematic tendency to underestimate prices. The mean absolute price error is $28.4\%$, with a standard deviation of $34.7\%$. These results suggest that, while the model captures general pricing tendencies without strong systematic bias, its predictive precision in this basic setup is limited, with a wide range of errors observed across different days and apartments.
+
 
 \section{Model limitations}
+\label{sec:limitations}
 The proposed pricing model relies on historical reservation data to estimate the joint distribution of occupancy and relative prices. As a result, the estimated density is limited to the support of the observed data and may not adequately capture rare or extreme demand conditions, which can reduce the reliability of price recommendations in such cases.
 
 Incorporating additional constraints, such as minimum allowable prices or controlled extensions of the distribution support, could improve robustness. This is particularly relevant if the model is combined with alternative demand forecasting approaches that may produce more volatile predictions.
@@ -181,4 +184,4 @@ Furthermore, the current model does not incorporate external variables that may 
 
 The pricing strategy is controlled by a fixed quantile parameter $\alpha$, which determines the aggressiveness of price recommendations. While this provides a simple mechanism for adjusting pricing behavior, using a constant value over time may not fully reflect changing market conditions or strategic objectives. For example, more conservative pricing may be appropriate for longer booking horizons, while more aggressive pricing may be desirable for medium-term horizons, and again more conservative pricing for last-minute bookings. Allowing $\alpha$ to vary dynamically as a function of time or demand uncertainty represents a potential extension of the model.
 
-Finally, the model operates on data from a specific market segment. Expanding the dataset to include a broader range of apartments, potentially beyond a single provider's portfolio, could improve the estimation of the occupancy–price relationship and enhance the overall performance of the model. However, selecting an appropriate market segment and ensuring sufficient data quality remain critical challenges in the application of this approach.
+Finally, the model operates on data from a specific market segment. Expanding the dataset to include a broader range of apartments, potentially beyond a single provider's portfolio, could improve the estimation of the occupancy–price relationship and enhance the overall performance of the model. At the same time, the choice of dataset plays a critical role: combining data from apartments with significantly different characteristics may distort the estimated relationship and reduce the relevance of the resulting price recommendations. Selecting an appropriate and sufficiently homogeneous market segment, while ensuring reasonable data volume and quality, remains a key challenge in the application of this approach.
