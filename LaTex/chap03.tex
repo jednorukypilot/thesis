@@ -18,7 +18,7 @@ Additional information, such as the booking date, can also be included and later
 \section{Data preprocessing}
 The model is designed around time-series containing daily demand and price data. The reservation data represent a time interval and are therefore transformed into the daily time series format, which serves as the primary input for the demand forecasting and price-setting components of the model. This transformation involves aggregating the reservation data to calculate daily demand in terms of beds sold and the corresponding average bed price in the analyzed period.
 
-For illustration, a simplified example of the transformation process is shown in Tables ~\ref{tab:reservation_example} and ~\ref{tab:daily_time_series_example} on a subset of the real data.
+For illustration, a simplified example of the transformation process is shown in Tables~\ref{tab:reservation_example} and~\ref{tab:daily_time_series_example} on a subset of the real data.
 
 \begin{table}[ht]
     \centering
@@ -70,7 +70,7 @@ The constructed time series is enriched by derived variables. The occupancy rate
 \section{Demand Forecasting}
 To forecast future occupancy levels, a SARIMA model was fitted to the historical occupancy time series. Model parameters were selected automatically using the Akaike Information Criterion (AIC) through a stepwise search procedure.
 
-The selected model corresponds to $SARIMA(1,0,3)(1,0,2)_7$, capturing both short-term dynamics and weekly seasonal patterns in the data. In particular, the strong seasonal autoregressive component reflects the dependence of occupancy on values observed one week earlier, which is consistent with typical booking patterns in short-term accommodation markets.
+The selected model corresponds to $\mathrm{SARIMA}(1,0,3)(1,0,2)_7$, capturing both short-term dynamics and weekly seasonal patterns in the data. In particular, the strong seasonal autoregressive component reflects the dependence of occupancy on values observed one week earlier, which is consistent with typical booking patterns in short-term accommodation markets.
 
 The model's performance was evaluated on a hold-out test set, yielding a Mean Absolute Error (MAE) of 7.84\% and a Root Mean Squared Error (RMSE) of 9.77\%. These values indicate a reasonable level of forecasting accuracy given the inherent variability of occupancy levels.
 

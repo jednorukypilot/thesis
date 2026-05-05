@@ -1,5 +1,5 @@
 \chapter{Pricing Mechanisms in Accommodation Services}
-Pricing in accommodation services is a complex decision-making problem that involves working with multiple factors. This section describes mechanisms used for effective pricing strategies in the accommodation sector. We will discuss what mechanism are being used to approach dynamic pricing, what factors influence pricing decisions. The problem is formalized in terms of relevant parameters of a revenue management case. Finally, we will propose principles that will be developed into a formal model in subsequent chapter.
+Pricing in accommodation services is a complex decision-making problem that involves working with multiple factors. This section describes mechanisms used for effective pricing strategies in the accommodation sector. We will discuss what mechanisms are being used to approach dynamic pricing, what factors influence pricing decisions. The problem is formalized in terms of relevant parameters of a revenue management case. Finally, we will propose principles that will be developed into a formal model in subsequent chapter.
 
 According to \cite{Ivanov2014}, there are several key components to effective revenue management in accommodation services, namely:
 \begin{itemize}
@@ -46,7 +46,7 @@ Correct identification of customer segments is a key component of revenue manage
 \subsection{Overbooking}
 Overbooking is one of the traditional methods of capacity management famously heavily adopted by the airline industry. That is also why it is a relatively well-researched topic within revenue management problems. This method can be effective even in the hospitality industry and some models are built around optimizing allocation with overbooking in mind \cite{Pimentel2019}. However, short-term non-hotel accommodation services often face specific challenges that limit the applicability of overbooking strategies. These properties typically have limited capacity and a general lack of flexibility in accommodating guests. Furthermore, rules and constraints imposed by some online travel agencies (OTAs) and distribution channels do not allow for a simple implementation of overbooking. This makes it difficult to manage the risks associated with overbooking and use these strategies effectively unlike in larger hotel services \cite{Schwartz2025} or the airline industry.
 
-\paragraph*{}
+\medskip
 In the context of non-hotel accommodation services and the model presented in this thesis, traditional capacity management methods are often not directly applicable. Segmentation remains an essential data analysis tool, as precise segmentation of the managed portfolio enables more accurate demand forecasting and, consequently, better pricing decisions. The applicability of overbooking strategies is limited by the operational characteristics of this type of accommodation. Therefore, our data-driven approach focuses on realistic demand prediction as the foundation of the pricing strategy. The underlying structure of the model allows for the incorporation of overbooking strategies into the revenue management framework, ensuring that the model remains flexible and adaptable to various operational contexts within the accommodation industry.
 
 \section{Price Mechanisms}
@@ -81,7 +81,7 @@ This positive correlation arises because both price and demand are influenced by
 
 Reliably estimating PED from historical selling data is challenging due to this endogeneity. More accurate estimation of PED from historical data could be achieved through using extensive analytical methods, advanced heuristics and precise segmentation or through different methods such as controlled experimentation \cite{Petricek2021}. However, this could be prohibitively difficult for many accommodation providers, as it would require extensive market data collection and analysis efforts in order to cover all possible segments and market conditions.
 
-\paragraph*{}
+\medskip
 Pricing mechanisms in accommodation services must account for the complex interplay between price, demand, and external factors such as seasonality and market trends. Price elasticity of demand is useful and common tool for understanding consumer behavior. However, estimation of price elasticity of demand from historical sales data is greatly complicated by the difficulty of correct data segmentation in order to keep external factors constant. While advanced methods could provide more accurate estimates, reliable estimation would likely be very resource intensive and challenging. Therefore, our proposed approach focuses on robust demand forecasting methods while utilizing the correlation between price and demand found in historical selling data instead of estimating price elasticity to form dynamic pricing decisions.
 
 \section{Demand Prediction}
@@ -143,7 +143,7 @@ where $(p,d,q)$ are the non-seasonal orders (autoregression, differencing, and m
 
 The most modern approach to demand forecasting are machine learning algorithms. These methods can capture complex patterns in time series data and often outperform traditional statistical techniques, especially when dealing with large datasets with multiple influencing factors. Extreme Gradient Boosting (XGBoost) and Random Forests are popular choices for demand prediction tasks. These algorithms can handle non-linear relationships and interactions between variables, making them suitable for complex demand forecasting scenarios. XGBoost, in particular, has gained popularity due to its ability to handle large datasets effectively \cite{Ampountolas2024}. These methods require careful data engineering and fine-tuning to achieve optimal performance but can provide significant improvements in forecast accuracy.
 
-\paragraph*{}
+\medskip
 Accurate demand prediction forms the core of the proposed pricing model. Its effectiveness depends primarily on the quality of demand forecasts, making the choice of an appropriate method particularly important. While the selected method can have significant impact on the overall performance of the pricing strategy, the underlying structure of the model can accommodate any forecasting technique that produces suitable output. This flexibility allows the model to adapt to various environments and forecasting capabilities of different accommodation providers as well as to future advancements in demand prediction methods.
 
 \section{Price Setting}
@@ -157,5 +157,5 @@ where $D(P)$ is the demand as a function of price $P$, and $R(P)$ is the resulti
 
 While many theoretical models aim to solve this optimization problem numerically, there is limited empirical evidence showing that such approaches consistently outperform experienced human revenue managers in practice \cite{Rust2018OptimalDH}. Human experts often rely on intuition, context, and accumulated experience to make pricing decisions that are well-calibrated to the specific market and operational constraints.
 
-\paragraph*{}
+\medskip
 Approach of the model proposed in this thesis does not attempt to directly solve the optimal pricing problem. It focuses on forecasting demand accurately, and then deriving prices based on the observed relationship between demand and price in historical sales data. This implicitly incorporates the expertise of human decision-makers encoded in past pricing behavior. While this may not lead to analytically optimal prices in the strict mathematical sense, it provides a practical and scalable way to automate pricing decisions in line with historically effective strategies and with  potential for improvement through further analysis and refinement.

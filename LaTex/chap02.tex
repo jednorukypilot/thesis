@@ -1,6 +1,6 @@
 \chapter{Mathematical Model for Dynamic Accommodation Pricing}
 
-The following chapter introduces a novel pricing model that combines statistical demand forecasting with a probabilistic approach to price suggestion. The model is designed to assist operational decision-making in short-term accommodation by leveraging historical sales data and anticipated occupancy levels. It is structured in two interconnected stages. First, future demand is estimated using a time series forecasting method (SARIMA), chosen for its interpretability and suitability for capturing seasonality in reservation data. This step produces an estimate of expected occupancy for each future date. In the second stage, the model uses historical occupancy and pricing data to infer the most appropriate price for the predicted demand level. This is achieved by estimating a conditional probability distribution of prices given occupancy, effectively capturing the historical behavior of human revenue managers under similar market conditions projected into predicted demand. A price is then selected as a quantile of this distribution, offering a data-based yet flexible mechanism to reflect managerial preferences regarding risk and competitiveness.
+The following chapter introduces a proposed pricing model that combines statistical demand forecasting with a probabilistic approach to price suggestion. The model is designed to assist operational decision-making in short-term accommodation by leveraging historical sales data and anticipated occupancy levels. It is structured in two interconnected stages. First, future demand is estimated using a time series forecasting method (SARIMA), chosen for its interpretability and suitability for capturing seasonality in reservation data. This step produces an estimate of expected occupancy for each future date. In the second stage, the model uses historical occupancy and pricing data to infer the most appropriate price for the predicted demand level. This is achieved by estimating a conditional probability distribution of prices given occupancy, effectively capturing the historical behavior of human revenue managers under similar market conditions projected into predicted demand. A price is then selected as a quantile of this distribution, offering a data-based yet flexible mechanism to reflect managerial preferences regarding risk and competitiveness.
 
 \section{Model Objectives}
 The objective of the proposed model is to provide data-driven price recommendations for short-term accommodation providers and to serve as a simple and accessible revenue management tool. The model does not strictly optimize for maximizing revenue or profit, as is common in traditional revenue management models. Instead, it is designed as a decision-support tool that captures the historical relationship between occupancy levels and pricing decisions and aims to provide data-driven and interpretable price recommendations based on predicted demand conditions.
@@ -42,11 +42,11 @@ The importance of this sample lies in capturing the historical relationship betw
 
 
 \section{Demand Forecasting with SARIMA}
-The first stage of the proposed model consists of forecasting future demand conditions represented by the occupancy rate of the selected apartment segment. As defined in the previous section, the historical occupancy time series is given by ${o_t}$.
+The first stage of the proposed model consists of forecasting future demand conditions represented by the occupancy rate of the selected apartment segment. As defined in the previous section, the historical occupancy time series is given by $o_t$.
 
-To predict future occupancy levels, a Seasonal AutoRegressive Integrated Moving Average (SARIMA) model is applied to the historical occupancy time series ${o_t}$. SARIMA was selected for its ability to capture both long term trend and seasonal variations commonly present in accommodation occupancy data, as discussed in section 1.3.2.
+To predict future occupancy levels, a Seasonal AutoRegressive Integrated Moving Average (SARIMA) model is applied to the historical occupancy time series $o_t$. SARIMA was selected for its ability to capture both long term trend and seasonal variations commonly present in accommodation occupancy data, as discussed in section 1.3.2.
 
-$SARIMA(p,d,q)(P,D,Q)_s$ model can be expressed as
+$\mathrm{SARIMA}(p,d,q)(P,D,Q)_s$ model can be expressed as
 
 \begin{equation}
     \phi_p(B)\,\Phi_P(B^s)\,(1-B)^d\,(1-B^s)^D\, o_t
@@ -74,7 +74,7 @@ The second stage of the proposed model is based on the assumption that historica
     P((O,R) \in A) = \int_A f_{O,R}(o,r) do dr,
 \end{equation}
 
-Since the functional form of the joint density $f_{O,R}(o,r)$ is unknown, it must be estimated from the observed historical sample. For this purpose, a non-parametric Kernel Density Estimation (KDE) approach is used. KDE estimates the density at a point $(o,r)$ as a weighted average of observed sample points, where weights decrease with increasing distance from the evaluated point.
+Since the functional form of the joint density $f_{O,R}(o,r)$ is unknown, it must be estimated from the observed historical sample. For this purpose, a non-parametric Kernel Density Estimation (KDE) approach is used. KDE estimates the density at a point $(o,r)$ as a weighted average of observed sample points, where weights decrease with increasing distance from the evaluated point. The smoothness of the estimated density is controlled by bandwidth parameters, which play a key role in the resulting estimate. Bandwidth selection is discussed in Chapter~3.
 
 The estimated density function can be expressed as
 
