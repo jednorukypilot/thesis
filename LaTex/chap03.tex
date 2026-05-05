@@ -84,7 +84,7 @@ The forecasted occupancy rates for the test period are visualized in Figure~\ref
 \section{Estimation of Occupancy–Price Distribution}
 The historical sample used for the price estimation stage consists of pairs $(o_t, r_t)$ constructed from the observed time series. This sample forms the empirical basis for estimating the relationship between occupancy and pricing. To capture this relationship, a joint probability density function of occupancy and relative price is estimated using a non-parametric Kernel Density Estimation (KDE) approach.
 
-The estimation is performed using a Gaussian kernel applied to the historical sample, implemented via the \texttt{gaussian\_kde} function from the SciPy library. The bandwidth parameter is selected automatically using Scott's rule.
+The estimation is performed using a Gaussian kernel applied to the historical sample, implemented via the \texttt{gaussian\_kde} function from the SciPy library \cite{2020SciPy-NMeth} with default automatic selection of the bandwidth parameter using Scott's rule.
 
 The resulting estimated density function $\hat{f}_{O,R}(o, r)$ is visualized in Figure~\ref{fig:kde_density}, which shows the joint distribution of occupancy and relative price based on the historical data.
 
