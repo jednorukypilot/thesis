@@ -167,13 +167,13 @@ The electronic attachment contains the full Python implementation of the pricing
 
 \begin{description}
     \item[\texttt{model\_pipeline.ipynb}] Jupyter notebook implementing the complete model workflow: data loading and preprocessing, SARIMA model fitting and occupancy forecasting, joint density estimation, and price recommendation generation. Reproduces all figures and tables presented in Chapter~3.
-    \item[\texttt{data/relevant\_data.csv}] Anonymized reservation dataset used in the model application (1{,}645 records, 13 apartments, October 2024 -- April 2025).
+    \item[\texttt{data/relevant\_data.csv}] Anonymized reservation dataset used in the model application.
     \item[\texttt{scripts/constants.py}] Configuration constants (date range, prediction horizon).
     \item[\texttt{scripts/data\_operation.py}] Utilities for loading and transforming raw reservation records.
     \item[\texttt{scripts/data\_preparation.py}] Functions for computing occupancy rates, relative price indices, and the historical sample~$\mathcal{D}$.
     \item[\texttt{scripts/demand\_forecasting.py}] SARIMA model fitting and occupancy forecasting via \texttt{pmdarima}.
     \item[\texttt{scripts/distribution\_estimation.py}] Joint density estimation and conditional distribution extraction via Gaussian KDE.
-    \item[\texttt{scripts/pricing.py}] Quantile-based price recommendation and apartment-specific price conversion.
+    \item[\texttt{scripts/pricing.py}] Quantile-based price recommendation and per apartment price conversion.
     \item[\texttt{requirements.txt}] Python package dependencies required to run the notebook.
 \end{description}
 
