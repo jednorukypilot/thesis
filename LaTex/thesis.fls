@@ -555,6 +555,7 @@ OUTPUT abbreviations.aux
 INPUT ./abbreviations.tex
 INPUT ./abbreviations.tex
 INPUT abbreviations.tex
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmtk10.tfm
 INPUT thesis.aux
 INPUT ./title.aux
 INPUT ./title.aux
@@ -599,5 +600,6 @@ INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/l
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
+INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb
 INPUT c:/Users/jrp/AppData/Local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
