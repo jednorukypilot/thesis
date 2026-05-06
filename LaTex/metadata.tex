@@ -11,7 +11,7 @@
 % Language of your study programme:
 %	"cs" for Czech
 %	"en" for English
-\def\StudyLanguage{en}
+\def\StudyLanguage{cs}
 
 % Thesis title in English (exactly as in the official assignment)
 % (Note: \xxx is a "ToDo label" which makes the unfilled visible. Remove it.)
@@ -74,16 +74,16 @@
 % If you are studing in a Czech programme, you also need to provide metadata in Czech:
 % (in English programmes, this is not used anywhere)
 
-\def\ThesisTitleCS{\xxx{Název práce česky}}
-\def\DepartmentCS{\xxx{Název katedry česky}}
-\def\DeptTypeCS{\xxx{Katedra}}
-\def\SupervisorsDepartmentCS{\xxx{katedra vedoucího}}
-\def\StudyProgrammeCS{\xxx{studijní program}}
+\def\ThesisTitleCS{Dynamická strategie oceňování v ubytovacích službách}
+\def\DepartmentCS{Katedra pravděpodobnosti a matematické statistiky}
+\def\DeptTypeCS{Katedra}
+\def\SupervisorsDepartmentCS{Katedra pravděpodobnosti a matematické statistiky}
+\def\StudyProgrammeCS{Finanční a pojistná matematika}
 
 \def\ThesisKeywordsCS{%
-    \xxx{klíčová slova\sep klíčové fráze}
+    dynamické oceňování\sep revenue management\sep předpověď poptávky\sep SARIMA\sep odhad hustoty
 }
 
 \def\AbstractCS{%
-    \xxx{Abstrakt práce přeložte také do češtiny.}
+    Tato práce se zabývá problémem dynamického oceňování pro poskytovatele krátkodobého ubytování. Navrhuje se dvoustupňový model oceňování, který pracuje s daty historických rezervací běžně dostupnými provozovatelům ubytování. V prvním stupni se předpovídá budoucí obsazenost pomocí modelu SARIMA. Ve druhém stupni se doporučení cen odvozují jako kvantily podmíněného pravděpodobnostního rozdělení cen, odhadovaného pomocí odhadu hustoty historických párů obsazenost–cena. Model je hodnocen na datové sadě 3{,}787 anonymizovaných záznamů rezervací z 13 pražských apartmánů v horizontu 394 dní. Komponenta SARIMA dosahuje střední absolutní chyby 7,29\% na testovacím období. Výsledná doporučení cen odrážejí historicky pozorované cenové chování za srovnatelných podmínek poptávky.
 }
