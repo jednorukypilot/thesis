@@ -2,7 +2,7 @@
 
 % --- Packages ---------------------------------------------------------------
 \usepackage{tikz}
-\usetikzlibrary{calc,positioning}
+\usetikzlibrary{calc,positioning,fadings}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{booktabs}
@@ -60,12 +60,31 @@
   \begin{tikzpicture}[remember picture,overlay]
     \shade[top color=aqua,bottom color=violet,opacity=0.96]
       ([xshift=0.79\paperwidth]current page.north west) rectangle (current page.south east);
-    \fill[white,opacity=0.11]
-      ([xshift=0.82\paperwidth,yshift=-0.10\paperheight]current page.north west)
-      rectangle ([xshift=0.91\paperwidth,yshift=-0.34\paperheight]current page.north west);
-    \fill[white,opacity=0.08]
-      ([xshift=0.88\paperwidth,yshift=-0.50\paperheight]current page.north west)
-      rectangle ([xshift=\paperwidth,yshift=-0.72\paperheight]current page.north west);
+    % overlapping color layers
+    \fill[aqua,path fading=west,opacity=0.42]
+      ([xshift=0.63\paperwidth,yshift=-0.00\paperheight]current page.north west)
+      rectangle ([xshift=\paperwidth,yshift=-0.62\paperheight]current page.north west);
+    \fill[sky,path fading=south,opacity=0.36]
+      ([xshift=0.80\paperwidth,yshift=-0.00\paperheight]current page.north west)
+      rectangle ([xshift=0.95\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[violet,opacity=0.32]
+      ([xshift=0.79\paperwidth,yshift=-0.30\paperheight]current page.north west)
+      rectangle ([xshift=\paperwidth,yshift=-0.78\paperheight]current page.north west);
+    \fill[aqua,opacity=0.38]
+      ([xshift=0.84\paperwidth,yshift=-0.07\paperheight]current page.north west)
+      rectangle ([xshift=\paperwidth,yshift=-0.44\paperheight]current page.north west);
+    \fill[sky,opacity=0.28]
+      ([xshift=0.79\paperwidth,yshift=-0.62\paperheight]current page.north west)
+      rectangle ([xshift=0.94\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[white,opacity=0.20]
+      ([xshift=0.79\paperwidth,yshift=-0.50\paperheight]current page.north west)
+      rectangle ([xshift=\paperwidth,yshift=-0.53\paperheight]current page.north west);
+    \fill[white,opacity=0.26]
+      ([xshift=0.86\paperwidth,yshift=-0.13\paperheight]current page.north west)
+      rectangle ([xshift=0.97\paperwidth,yshift=-0.27\paperheight]current page.north west);
+    \fill[white,opacity=0.18]
+      ([xshift=0.79\paperwidth,yshift=-0.80\paperheight]current page.north west)
+      rectangle ([xshift=0.88\paperwidth,yshift=-0.85\paperheight]current page.north west);
   \end{tikzpicture}%
 }
 
@@ -118,12 +137,28 @@
     \shade[left color=burgundy,right color=violet,opacity=0.55]
       ([yshift=-0.62\paperheight]current page.north west)
       rectangle ([yshift=-0.62\paperheight-2.0pt]current page.north east);
-    \fill[white,opacity=0.10]
-      ([xshift=0.72\paperwidth,yshift=-0.08\paperheight]current page.north west)
-      rectangle ([xshift=0.93\paperwidth,yshift=-0.28\paperheight]current page.north west);
-    \fill[white,opacity=0.08]
-      ([xshift=0.08\paperwidth,yshift=-0.43\paperheight]current page.north west)
-      rectangle ([xshift=0.28\paperwidth,yshift=-0.56\paperheight]current page.north west);
+    % overlapping color layers
+    \fill[violet,path fading=east,opacity=0.42]
+      ([xshift=-0.05\paperwidth,yshift=-0.00\paperheight]current page.north west)
+      rectangle ([xshift=0.72\paperwidth,yshift=-0.62\paperheight]current page.north west);
+    \fill[aqua,path fading=west,opacity=0.40]
+      ([xshift=0.30\paperwidth,yshift=-0.00\paperheight]current page.north west)
+      rectangle ([xshift=\paperwidth,yshift=-0.48\paperheight]current page.north west);
+    \fill[sky,opacity=0.38]
+      ([xshift=0.18\paperwidth,yshift=-0.04\paperheight]current page.north west)
+      rectangle ([xshift=\paperwidth,yshift=-0.30\paperheight]current page.north west);
+    \fill[aqua,opacity=0.34]
+      ([xshift=0.14\paperwidth,yshift=-0.28\paperheight]current page.north west)
+      rectangle ([xshift=0.90\paperwidth,yshift=-0.62\paperheight]current page.north west);
+    \fill[sky,path fading=north,opacity=0.36]
+      ([xshift=0.64\paperwidth,yshift=-0.00\paperheight]current page.north west)
+      rectangle ([xshift=0.99\paperwidth,yshift=-0.52\paperheight]current page.north west);
+    \fill[violet,path fading=east,opacity=0.30]
+      ([xshift=-0.02\paperwidth,yshift=-0.14\paperheight]current page.north west)
+      rectangle ([xshift=0.46\paperwidth,yshift=-0.62\paperheight]current page.north west);
+    \fill[white,opacity=0.14]
+      ([xshift=0.76\paperwidth,yshift=-0.08\paperheight]current page.north west)
+      rectangle ([xshift=0.96\paperwidth,yshift=-0.26\paperheight]current page.north west);
     \fill[violet]
       ([xshift=-0.25\paperwidth,yshift=-0.79\paperheight]current page.north east)
       rectangle ([xshift=-0.07\paperwidth,yshift=-0.805\paperheight]current page.north east);
@@ -247,12 +282,40 @@
   \begin{tikzpicture}[remember picture,overlay]
     \shade[top color=violet,bottom color=aqua,opacity=0.96]
     ([xshift=0.60\paperwidth]current page.north west) rectangle (current page.south east);
-    \fill[white,opacity=0.11]
-    ([xshift=0.65\paperwidth,yshift=-0.10\paperheight]current page.north west)
-    rectangle ([xshift=0.80\paperwidth,yshift=-0.34\paperheight]current page.north west);
-    \fill[white,opacity=0.08]
-    ([xshift=0.75\paperwidth,yshift=-0.50\paperheight]current page.north west)
-    rectangle ([xshift=\paperwidth,yshift=-0.72\paperheight]current page.north west);
+    % overlapping color layers
+    \fill[navy,opacity=0.34]
+    ([xshift=0.80\paperwidth,yshift=-0.00\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-0.36\paperheight]current page.north west);
+    \fill[violet,path fading=south,opacity=0.42]
+    ([xshift=0.59\paperwidth,yshift=-0.00\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-0.50\paperheight]current page.north west);
+    \fill[aqua,path fading=west,opacity=0.40]
+    ([xshift=0.61\paperwidth,yshift=-0.08\paperheight]current page.north west)
+    rectangle ([xshift=0.99\paperwidth,yshift=-0.42\paperheight]current page.north west);
+    \fill[sky,opacity=0.36]
+    ([xshift=0.58\paperwidth,yshift=-0.00\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[violet,opacity=0.34]
+    ([xshift=0.72\paperwidth,yshift=-0.00\paperheight]current page.north west)
+    rectangle ([xshift=0.78\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[aqua,opacity=0.38]
+    ([xshift=0.58\paperwidth,yshift=-0.54\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[sky,path fading=north,opacity=0.36]
+    ([xshift=0.82\paperwidth,yshift=-0.00\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-0.68\paperheight]current page.north west);
+    \fill[violet,path fading=south,opacity=0.30]
+    ([xshift=0.58\paperwidth,yshift=-0.00\paperheight]current page.north west)
+    rectangle ([xshift=0.96\paperwidth,yshift=-0.22\paperheight]current page.north west);
+    \fill[white,opacity=0.24]
+    ([xshift=0.60\paperwidth,yshift=-0.44\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-0.47\paperheight]current page.north west);
+    \fill[white,opacity=0.28]
+    ([xshift=0.81\paperwidth,yshift=-0.07\paperheight]current page.north west)
+    rectangle ([xshift=0.96\paperwidth,yshift=-0.22\paperheight]current page.north west);
+    \fill[white,opacity=0.18]
+    ([xshift=0.60\paperwidth,yshift=-0.74\paperheight]current page.north west)
+    rectangle ([xshift=0.74\paperwidth,yshift=-0.80\paperheight]current page.north west);
   \end{tikzpicture}%
   \begin{columns}[c,onlytextwidth]
     \begin{column}{0.55\textwidth}
@@ -272,6 +335,28 @@
     \shade[left color=aqua,right color=violet,opacity=0.96]
     ([yshift=-0.112\paperheight]current page.north west)
     rectangle ([yshift=0.038\paperheight]current page.south east);
+    % overlapping color layers
+    \fill[sky,path fading=east,opacity=0.40]
+    ([xshift=-0.05\paperwidth,yshift=-0.12\paperheight]current page.north west)
+    rectangle ([xshift=0.78\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[violet,path fading=west,opacity=0.38]
+    ([xshift=0.22\paperwidth,yshift=-0.12\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[aqua,path fading=north,opacity=0.42]
+    ([xshift=0.38\paperwidth,yshift=-0.12\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-0.52\paperheight]current page.north west);
+    \fill[sky,opacity=0.36]
+    ([xshift=0.00\paperwidth,yshift=-0.44\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-0.56\paperheight]current page.north west);
+    \fill[violet,opacity=0.34]
+    ([xshift=0.00\paperwidth,yshift=-0.12\paperheight]current page.north west)
+    rectangle ([xshift=0.16\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[aqua,opacity=0.32]
+    ([xshift=0.58\paperwidth,yshift=-0.62\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[white,opacity=0.14]
+    ([xshift=0.02\paperwidth,yshift=-0.22\paperheight]current page.north west)
+    rectangle ([xshift=0.64\paperwidth,yshift=-0.30\paperheight]current page.north west);
   \end{tikzpicture}%
   \begin{columns}[c,onlytextwidth]
     \begin{column}{0.306\textwidth}
@@ -308,12 +393,37 @@
   \begin{tikzpicture}[remember picture,overlay]
     \shade[top color=aqua,bottom color=violet,opacity=0.96]
     ([xshift=0.60\paperwidth]current page.north west) rectangle (current page.south east);
-    \fill[white,opacity=0.11]
-    ([xshift=0.65\paperwidth,yshift=-0.10\paperheight]current page.north west)
-    rectangle ([xshift=0.80\paperwidth,yshift=-0.34\paperheight]current page.north west);
-    \fill[white,opacity=0.08]
-    ([xshift=0.75\paperwidth,yshift=-0.50\paperheight]current page.north west)
-    rectangle ([xshift=\paperwidth,yshift=-0.72\paperheight]current page.north west);
+    % overlapping color layers
+    \fill[aqua,path fading=west,opacity=0.44]
+    ([xshift=0.44\paperwidth,yshift=-0.00\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-0.56\paperheight]current page.north west);
+    \fill[sky,path fading=south,opacity=0.40]
+    ([xshift=0.56\paperwidth,yshift=-0.00\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[violet,opacity=0.36]
+    ([xshift=0.58\paperwidth,yshift=-0.28\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-0.80\paperheight]current page.north west);
+    \fill[aqua,opacity=0.38]
+    ([xshift=0.68\paperwidth,yshift=-0.00\paperheight]current page.north west)
+    rectangle ([xshift=0.74\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[sky,opacity=0.34]
+    ([xshift=0.82\paperwidth,yshift=-0.00\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-0.46\paperheight]current page.north west);
+    \fill[violet,path fading=east,opacity=0.36]
+    ([xshift=0.56\paperwidth,yshift=-0.52\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-\paperheight]current page.north west);
+    \fill[aqua,path fading=north,opacity=0.32]
+    ([xshift=0.56\paperwidth,yshift=-0.00\paperheight]current page.north west)
+    rectangle ([xshift=0.98\paperwidth,yshift=-0.24\paperheight]current page.north west);
+    \fill[white,opacity=0.24]
+    ([xshift=0.58\paperwidth,yshift=-0.48\paperheight]current page.north west)
+    rectangle ([xshift=\paperwidth,yshift=-0.51\paperheight]current page.north west);
+    \fill[white,opacity=0.28]
+    ([xshift=0.82\paperwidth,yshift=-0.10\paperheight]current page.north west)
+    rectangle ([xshift=0.97\paperwidth,yshift=-0.26\paperheight]current page.north west);
+    \fill[white,opacity=0.18]
+    ([xshift=0.58\paperwidth,yshift=-0.80\paperheight]current page.north west)
+    rectangle ([xshift=0.72\paperwidth,yshift=-0.86\paperheight]current page.north west);
     \node[anchor=north] at ([xshift=0.80\paperwidth,yshift=-0.04\paperheight]current page.north west) {
       \includegraphics[width=0.4\paperwidth,height=0.88\paperheight,keepaspectratio]{estimated_density_vert.png}
     };
