@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1782211584.63842 "c:/Users/jrp/OneDrive/Dokuments/My Documents/School/MFF/Mathematics/Finanční Matematika/thesis/source/presentation/presentation.tex" "presentation.pdf" "presentation" 1782211587.88858 0
+["pdflatex"] 1782214439.76824 "c:/Users/jrp/OneDrive/Dokuments/My Documents/School/MFF/Mathematics/Finanční Matematika/thesis/source/presentation/presentation.tex" "presentation.pdf" "presentation" 1782214442.63434 0
   "../LaTex/figures/KDE.png" 1782200748 25542 6a499b533473d1cc4c8a3350eb92bef6 ""
   "../LaTex/figures/demand_prediction.png" 1778017688 61610 c1e486c8ada4ad10e969e77663182891 ""
   "../LaTex/figures/estimated_density_vert.png" 1782207552 88766 a0266ace4d5141e7cf93de889b03a480 ""
@@ -243,11 +243,11 @@
   "c:/Users/jrp/AppData/Local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1742056515 5428669 36dd5aac8246e3b19d17135e7a61a1fc ""
   "c:/Users/jrp/AppData/Local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1742056629 2526374 64940f5d088b7aace25e980768d0dcc7 ""
   "c:/Users/jrp/AppData/Local/texlive/2025/texmf.cnf" 1742056502 713 e69b156964470283e0530f5060668171 ""
-  "c:/Users/jrp/OneDrive/Dokuments/My Documents/School/MFF/Mathematics/Finanční Matematika/thesis/source/presentation/presentation.tex" 1782211583 15006 84b21ac289fd5b3cb0c04393bb3c8a6a ""
-  "presentation.aux" 1782211587 2701 12572d6f19147e96df830ca68107a8e7 "pdflatex"
-  "presentation.nav" 1782211587 1109 07396102f9d82bf25877ba7d82798efb "pdflatex"
-  "presentation.out" 1782211586 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "presentation.tex" 1782211583 15006 84b21ac289fd5b3cb0c04393bb3c8a6a ""
+  "c:/Users/jrp/OneDrive/Dokuments/My Documents/School/MFF/Mathematics/Finanční Matematika/thesis/source/presentation/presentation.tex" 1782214435 15028 df1c8b609830e7791e86a4a6b922b2f7 ""
+  "presentation.aux" 1782214442 2701 0fe8229dfd6fcec31fa00519f1c5c383 "pdflatex"
+  "presentation.nav" 1782214442 1109 07396102f9d82bf25877ba7d82798efb "pdflatex"
+  "presentation.out" 1782214441 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "presentation.tex" 1782214435 15028 df1c8b609830e7791e86a4a6b922b2f7 ""
   (generated)
   "presentation.aux"
   "presentation.log"
